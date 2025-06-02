@@ -1,4 +1,4 @@
-// Tema claro/escuro
+// Tema claro/escuro com PNGs personalizados
 const html = document.documentElement;
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
@@ -14,28 +14,37 @@ function atualizarFundoHero() {
   }
 }
 
-// Inicialização do tema e do fundo
+// Função para atualizar o ícone do tema
+function atualizarIconeTema() {
+  if (html.getAttribute('data-theme') === 'dark') {
+    themeIcon.src = 'dia.png';
+    themeIcon.alt = 'Modo claro';
+  } else {
+    themeIcon.src = 'noite.png';
+    themeIcon.alt = 'Modo escuro';
+  }
+}
+
+// Inicialização do tema, fundo e ícone
 if (themeStorage === 'dark') {
   html.setAttribute('data-theme', 'dark');
-  themeIcon.textContent = '☀️';
 } else {
   html.setAttribute('data-theme', 'light');
-  themeIcon.textContent = '🌙';
 }
 atualizarFundoHero();
+atualizarIconeTema();
 
 themeToggle.addEventListener('click', () => {
   const current = html.getAttribute('data-theme');
   if (current === 'dark') {
     html.setAttribute('data-theme', 'light');
     localStorage.setItem('theme', 'light');
-    themeIcon.textContent = '🌙';
   } else {
     html.setAttribute('data-theme', 'dark');
     localStorage.setItem('theme', 'dark');
-    themeIcon.textContent = '☀️';
   }
   atualizarFundoHero();
+  atualizarIconeTema();
 });
 
 // Botão voltar ao topo
@@ -63,6 +72,12 @@ document.querySelectorAll('.nav-link').forEach(link => {
       this.classList.add('active');
       const section = document.querySelector(href);
       if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Mostra os projetos, esconde os detalhes se clicar no início
+      if (href === "#projects-list") {
+        document.getElementById('projects-list').style.display = 'block';
+        document.getElementById('project-orcamento').style.display = 'none';
+        document.getElementById('project-ecommerce').style.display = 'none';
+      }
     }
   });
 });
@@ -92,4 +107,38 @@ langBtns.forEach(btn => {
     lang = this.dataset.lang;
     // Aqui você pode trocar textos se desejar, atualmente só altera visual
   });
+});
+
+// ---- BLOCO DE PROJETOS ----
+const projectCards = document.querySelectorAll('.project-card');
+const projectOrcamento = document.getElementById('project-orcamento');
+const projectEcommerce = document.getElementById('project-ecommerce');
+const projectsList = document.getElementById('projects-list');
+
+projectCards.forEach(card => {
+  card.addEventListener('click', function() {
+    projectsList.style.display = 'none';
+    projectOrcamento.style.display = 'none';
+    projectEcommerce.style.display = 'none';
+    if (card.dataset.project === "orcamento") {
+      projectOrcamento.style.display = 'block';
+      setTimeout(() => projectOrcamento.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    }
+    if (card.dataset.project === "ecommerce") {
+      projectEcommerce.style.display = 'block';
+      setTimeout(() => projectEcommerce.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    }
+  });
+});
+
+// BOTÃO "Voltar para o início"
+document.getElementById('back-to-projects-orcamento').addEventListener('click', () => {
+  projectOrcamento.style.display = 'none';
+  projectsList.style.display = 'block';
+  projectsList.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+document.getElementById('back-to-projects-ecommerce').addEventListener('click', () => {
+  projectEcommerce.style.display = 'none';
+  projectsList.style.display = 'block';
+  projectsList.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });

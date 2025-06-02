@@ -108,7 +108,6 @@ body {
   margin-left: -28px; /* compensar espaço do logo visualmente */
 }
 
-/* Botões do topo - IGUAL OS ÍCONES DAS REDES SOCIAIS */
 .nav-link {
   color: var(--social);
   display: flex;
@@ -127,7 +126,6 @@ body {
   box-shadow: none;
   margin: 0 4px;
   padding: 0;
- 
 }
 
 .nav-link.active,
@@ -137,7 +135,7 @@ body {
 }
 
 .nav-link::after {
-  display: none; /* Remove underline animada para manter igual ao ícone */
+  display: none;
 }
 
 /* Bottom bar in header */
@@ -197,7 +195,6 @@ body {
   color: var(--accent2);
 }
 
-/* Theme toggle (flutuante) */
 .theme-float {
   position: fixed;
   bottom: 2rem;
@@ -206,13 +203,18 @@ body {
   color: #fff;
   border: none;
   border-radius: 50%;
-  padding: 1.05rem 1.1rem 1.05rem 1.1rem;
+  width: 52px;
+  height: 52px;
+  padding: 0;
   font-size: 1.3rem;
   box-shadow: 0 2px 14px rgba(70,128,153,0.13);
   cursor: pointer;
   z-index: 1001;
   opacity: 0.89;
   transition: background .18s, color .18s, opacity .18s, transform .18s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .theme-float:hover {
   background: var(--accent);
@@ -220,7 +222,22 @@ body {
   opacity: 1;
   transform: scale(1.12);
 }
-
+.theme-float img {
+  width: 28px;
+  height: 28px;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  transition: width 0.18s, height 0.18s;
+}
+/* Só dia.png maior, sem aumentar o círculo */
+.theme-float img[src$="dia.png"] {
+  width: 32px;
+  height: 32px;
+  max-width: 32px;
+  max-height: 32px;
+  object-fit: contain;
+}
 /* Conteúdo principal */
 .container {
   max-width: 900px;
@@ -423,19 +440,50 @@ li {
   margin-top: 0;
   margin-bottom: 0.7rem;
   font-size: 1.5rem;
-  color: var(--accent2);
+  color: #ffffff;
 }
 .sobre-mim-texto p {
   margin: 0;
   font-size: 1.08rem;
   line-height: 1.68;
 }
+
+/* PERFIL - TÍTULO E TECNOLOGIAS */
+.perfil-titulo {
+  display: block;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  color: var(--accent2);
+  font-weight: 700;
+}
+.perfil-subtitulo {
+  margin-bottom: 0.2rem;
+  margin-top: 1.5rem;
+  font-size: 1.15rem;
+  color: var(--accent2);
+  font-weight: 700;
+}
+.perfil-tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+  align-items: center;
+}
+.perfil-tecnologias img {
+  border-radius: 6px;
+  padding: 3px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* RESPONSIVIDADE SOBRE MIM E PERFIL */
 @media (max-width: 700px) {
   .sobre-mim-content { flex-direction: column; align-items: center; gap: 1.2rem; }
   .sobre-mim-texto { text-align: center; }
+  .perfil-tecnologias { justify-content: center; }
 }
 
-/* Responsividade */
+/* Responsividade geral */
 @media (max-width: 1200px) {
   .container { max-width: 98vw; }
   .hero-avatar { max-width: 60vw; }
@@ -467,4 +515,112 @@ li {
   #back-to-top, .theme-float { left: 0.7rem; right: auto; bottom: 0.7rem; }
   .img-fluid { max-width: 96vw; }
   .hero-title-block h1 { font-size: 1.3rem; }
+}
+
+/* PROJETOS INICIAIS - estilo dos cards */
+.projects-list-container {
+  max-width: 1100px;
+  margin: 40px auto 56px auto;
+  padding: 0 2vw;
+  box-sizing: border-box;
+}
+.projects-list-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px;
+  justify-content: center;
+}
+.project-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 38px 0 rgba(0,0,0,0.07);
+  width: 420px;
+  max-width: 98vw;
+  cursor: pointer;
+  padding: 0 0 32px 0;
+  transition: box-shadow .18s, transform .18s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.project-card:hover {
+  box-shadow: 0 12px 48px 0 rgba(70,128,153,0.14);
+  transform: translateY(-6px) scale(1.04);
+}
+.project-image {
+  width: 100%;
+  height: 290px;
+  border-radius: 18px 18px 0 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 18px;
+}
+.project-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #323232;
+  margin: 0 0 6px 0;
+  text-align: center;
+  letter-spacing: -1px;
+}
+.project-desc {
+  font-size: 1.08rem;
+  color: #5a5a5a;
+  opacity: 0.87;
+  text-align: center;
+  margin: 0 14px;
+}
+@media (max-width: 900px) {
+  .projects-list-grid { flex-direction: column; gap: 26px; align-items: center;}
+  .project-card { width: 98vw; }
+  .project-image { height: 190px;}
+}
+@media (max-width: 500px) {
+  .project-card { width: 99vw; }
+  .project-image { height: 120px;}
+  .projects-list-container { padding: 0 2vw; }
+}
+
+/* PROJETO DETALHADO */
+.project-details-container {
+  max-width: 900px;
+  margin: 0 auto 48px auto;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  background: transparent;
+  border-radius: 16px;
+}
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.contato-section {
+  text-align: center;
+  padding-top: 0.5rem !important; /* ou 0, ou outro valor menor */
+}
+/* Ícone Adobe Portfolio - cor no tema claro */
+.adobe-pf-icon {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) saturate(100%) invert(12%) sepia(6%) saturate(1700%) hue-rotate(169deg) brightness(95%) contrast(95%);
+  /* O filter acima aproxima #222222 */
+  transition: filter .18s;
+}
+
+/* Ícone Adobe Portfolio - cor clara personalizada no tema escuro */
+[data-theme="dark"] .adobe-pf-icon {
+  filter: brightness(0) saturate(100%) invert(93%) sepia(1%) saturate(1300%) hue-rotate(163deg) brightness(103%) contrast(84%);
+}
+.footer-social .icon-link,
+.footer-social .icon-link i,
+.footer-social .icon-link img {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  vertical-align: middle;
+  background-clip: padding-box;
 }
