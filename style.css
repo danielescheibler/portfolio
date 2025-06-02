@@ -23,7 +23,7 @@
 
 /* --- AJUSTES PARA MODO ESCURO --- */
 [data-theme="dark"] .icon-link {
-  background: #181f1f !important;
+  background: #1F1F1F !important;
 }
 [data-theme="dark"] .icon-link:hover,
 [data-theme="dark"] .icon-link:focus {
@@ -71,6 +71,7 @@ body {
   z-index: 1;
   opacity: 1;
   pointer-events: none;
+  transition: background-image 0.3s;
 }
 
 /* TOPO: logo esquerda, menu centralizado */
@@ -131,11 +132,29 @@ body {
 .nav-link.active,
 .nav-link:hover,
 .nav-link:focus {
-  color: #468099;
+  color: #40849e;
 }
 
 .nav-link::after {
   display: none;
+}
+
+/* MENU HAMBURGUER */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  z-index: 20;
+  cursor: pointer;
+  padding: 0;
+}
+.menu-toggle img {
+  width: 32px;
+  height: 32px;
+  display: block;
 }
 
 /* Bottom bar in header */
@@ -177,6 +196,8 @@ body {
   align-items: center;
   gap: 0.3rem;
   pointer-events: auto;
+  white-space: nowrap;
+  overflow: visible;
 }
 .lang-btn {
   background: none;
@@ -230,7 +251,6 @@ body {
   user-select: none;
   transition: width 0.18s, height 0.18s;
 }
-/* Só dia.png maior, sem aumentar o círculo */
 .theme-float img[src$="dia.png"] {
   width: 32px;
   height: 32px;
@@ -238,7 +258,6 @@ body {
   max-height: 32px;
   object-fit: contain;
 }
-/* Conteúdo principal */
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -391,7 +410,7 @@ li {
   border: none;
   border-radius: 50%;
   padding: 1rem 1.15rem 1rem 1.15rem;
-  font-size: 1.3rem;
+  font-size: 1.07rem;
   box-shadow: 0 2px 14px rgba(70,128,153,0.13);
   cursor: pointer;
   z-index: 1000;
@@ -440,7 +459,7 @@ li {
   margin-top: 0;
   margin-bottom: 0.7rem;
   font-size: 1.5rem;
-  color: #ffffff;
+  color: #323232;
 }
 .sobre-mim-texto p {
   margin: 0;
@@ -473,7 +492,6 @@ li {
 .perfil-tecnologias img {
   border-radius: 6px;
   padding: 3px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
 }
 
 /* RESPONSIVIDADE SOBRE MIM E PERFIL */
@@ -499,15 +517,115 @@ li {
   .hero-title-block h1 { font-size: 2.7rem; }
   .hero-avatar { max-width: 80vw; }
 }
+
+/* ===== MOBILE AJUSTES EXTRAS ===== */
 @media (max-width: 700px) {
-  .site-hero-top { flex-direction: column; align-items: flex-start; padding-top: 10px; gap: 0.5rem;}
-  .site-logo { margin: 10px 0 8px 10px; }
-  .header-nav { flex-direction: column; gap: 0.5rem; align-items: flex-start; margin-left: 0;}
-  .container { padding: 1.2rem 0.5rem 1.2rem 0.5rem; }
+  .site-hero-top {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+    padding-top: 10px;
+    padding-right: 0;
+  }
+  .site-logo {
+    margin: 10px 0 8px 10px;
+    height: 32px;
+  }
+  .menu-toggle {
+    display: block !important;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    z-index: 20;
+    cursor: pointer;
+    padding: 0;
+  }
+  .menu-toggle img {
+    width: 32px;
+    height: 32px;
+    display: block;
+  }
+  .header-nav {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    top: 54px;
+    right: 6px;
+    background: var(--header-bg);
+    border-radius: 8px;
+    padding: 16px 24px 16px 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.11);
+    z-index: 12;
+    min-width: 160px;
+    width: max-content;
+    align-items: flex-end;
+  }
+  .header-nav.active {
+    display: flex;
+  }
+  .header-social {
+    display: none !important;
+  }
+  .header-lang {
+    display: flex !important;
+    position: absolute;
+    top: 14px;
+    right: 64px;
+    z-index: 21;
+    background: transparent;
+    white-space: nowrap;
+    overflow: visible;
+    font-size: 1.04rem;
+    padding: 0 4px;
+  }
+  .container {
+    padding: 1.2rem 1rem 1.2rem 1rem; /* Mais espaço nas laterais */
+  }
+  .cards-row,
+  .projects-list-grid {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    gap: 0.5rem;
+  }
   .site-hero-bottom { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
-  .cards-row { flex-direction: column; gap: 0.7rem;}
-  .hero-title-block h1 { font-size: 2.1rem; }
+  .hero-title-block h1 { font-size: 1.7rem; }
+  .hero-content {
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero-image-block {
+    max-width: 95vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-avatar {
+    max-width: 60vw;
+    width: 100%;
+    height: auto;
+    border-radius: 0.6rem;
+  }
+
+  /* Cards e project-card menores e quadrados */
+  .card, .project-card {
+    aspect-ratio: 1 / 1;
+    max-width: 75vw;
+    min-width: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.3rem 1.2rem; /* Mais espaço lateral nas caixas */
+  }
+
+  /* Texto Sobre Mim justificado */
+  .sobre-mim-texto p { text-align: justify; }
 }
+
 @media (max-width: 450px) {
   .site-hero-top { padding-left: 2px; }
   .site-logo { margin-left: 2px;}
@@ -515,6 +633,29 @@ li {
   #back-to-top, .theme-float { left: 0.7rem; right: auto; bottom: 0.7rem; }
   .img-fluid { max-width: 96vw; }
   .hero-title-block h1 { font-size: 1.3rem; }
+  .container { padding: 0.6rem 0.3rem 0.6rem 0.3rem; }
+  .hero-avatar {
+    max-width: 50vw;
+  }
+  .card, .project-card {
+    max-width: 62vw;
+    min-width: 40px;
+    padding: 0.18rem 0.7rem;
+  }
+}
+
+/* MENU HAMBURGUER SOBREPOR */
+.menu-overlay {
+  display: none;
+}
+.menu-overlay.active {
+  display: block;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(50,50,50,0.10);
+  z-index: 10;
 }
 
 /* PROJETOS INICIAIS - estilo dos cards */
@@ -529,23 +670,23 @@ li {
   flex-wrap: wrap;
   gap: 44px;
   justify-content: center;
+  align-items: stretch;
 }
 .project-card {
   background: #fff;
   border-radius: 18px;
-  box-shadow: 0 4px 38px 0 rgba(0,0,0,0.07);
   width: 420px;
   max-width: 98vw;
   cursor: pointer;
   padding: 0 0 32px 0;
-  transition: box-shadow .18s, transform .18s;
+  transition: transform .18s;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  margin-bottom: 10px;
 }
 .project-card:hover {
-  box-shadow: 0 12px 48px 0 rgba(70,128,153,0.14);
   transform: translateY(-6px) scale(1.04);
 }
 .project-image {
@@ -555,32 +696,45 @@ li {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 18px;
+  margin-bottom: 0;
+}
+.project-info {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 36px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .project-title {
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: #323232;
-  margin: 0 0 6px 0;
+  margin: 18px 0 6px 0;
   text-align: center;
   letter-spacing: -1px;
 }
 .project-desc {
-  font-size: 1.08rem;
+  font-size: 1.07rem;
   color: #5a5a5a;
   opacity: 0.87;
   text-align: center;
-  margin: 0 14px;
+  margin: 0 14px 0 14px;
+  margin-bottom: 16px;
+  max-width: 420px;
 }
+
 @media (max-width: 900px) {
   .projects-list-grid { flex-direction: column; gap: 26px; align-items: center;}
   .project-card { width: 98vw; }
   .project-image { height: 190px;}
+  .project-info, .project-title, .project-desc { max-width: 98vw; }
 }
 @media (max-width: 500px) {
   .project-card { width: 99vw; }
   .project-image { height: 120px;}
   .projects-list-container { padding: 0 2vw; }
+  .project-info, .project-title, .project-desc { max-width: 99vw; }
 }
 
 /* PROJETO DETALHADO */
@@ -599,14 +753,13 @@ li {
 }
 .contato-section {
   text-align: center;
-  padding-top: 0.5rem !important; /* ou 0, ou outro valor menor */
+  padding-top: 0.5rem !important;
 }
 /* Ícone Adobe Portfolio - cor no tema claro */
 .adobe-pf-icon {
   width: 22px;
   height: 22px;
   filter: brightness(0) saturate(100%) invert(12%) sepia(6%) saturate(1700%) hue-rotate(169deg) brightness(95%) contrast(95%);
-  /* O filter acima aproxima #222222 */
   transition: filter .18s;
 }
 

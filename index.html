@@ -15,18 +15,25 @@
     <div class="site-hero-bg"></div>
     <div class="site-hero-top">
       <img src="logo.png" alt="Logo Daniele Scheibler" class="site-logo">
-      <nav class="header-nav">
+      <!-- BOTÃO MENU HAMBURGUER MOBILE -->
+    <button class="menu-toggle" aria-label="Abrir menu" id="menu-toggle">
+  <img src="burger-bar.png" alt="Menu">
+</button>
+      <!-- MENU NAV -->
+      <nav class="header-nav" id="header-nav">
         <a href="#projects-list" class="nav-link">Página Inicial</a>
         <a href="#sobre-mim" class="nav-link">Sobre Mim</a>
         <a href="#contato" class="nav-link">Contato</a>
       </nav>
+      <!-- OVERLAY PARA O MENU MOBILE -->
+      <div class="menu-overlay" id="menu-overlay"></div>
     </div>
     <div class="site-hero-bottom">
       <div class="header-social">
         <a href="https://github.com/danielescheibler" target="_blank" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://instagram.com/danieles.designer" target="_blank" class="icon-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/danielescheibler/" target="_blank" class="icon-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        </div>
+      </div>
       <div class="header-lang">
         <button class="lang-btn active" data-lang="pt">PT</button> |
         <button class="lang-btn" data-lang="en">EN</button>
@@ -66,25 +73,29 @@
         </div>
       </div>
     </section>
-
-    <!-- BLOCO DE PROJETOS INICIAIS -->
+    <!-- PROJETOS INICIAIS -->
     <section id="projects-list" class="projects-list-container">
       <div class="projects-list-grid">
-        <!-- Projeto 1 -->
-        <div class="project-card" data-project="orcamento">
-          <div class="project-image" style="background-image:url('orcamento-thumb.jpg');"></div>
+        <div class="project-group">
+          <div class="project-card" data-project="orcamento">
+            <div class="project-image" style="background-image:url('orcamento-thumb.jpg');"></div>
+          </div>
           <div class="project-title">Orçamento de Serviços Express</div>
-          <div class="project-desc">UX/UI para otimizar orçamentos de vídeo e facilitar a vida do profissional audiovisual.</div>
+          <div class="project-desc">
+            UX/UI para otimizar orçamentos de vídeo e facilitar a vida do profissional audiovisual.
+          </div>
         </div>
-        <!-- Projeto 2 -->
-        <div class="project-card" data-project="ecommerce">
-          <div class="project-image" style="background-image:url('ecommerce-thumb.jpg');"></div>
+        <div class="project-group">
+          <div class="project-card" data-project="ecommerce">
+            <div class="project-image" style="background-image:url('ecommerce-thumb.jpg');"></div>
+          </div>
           <div class="project-title">E-commerce (Projeto Fictício)</div>
-          <div class="project-desc">Experiência de compra digital, design de interface e jornada do usuário para loja online.</div>
+          <div class="project-desc">
+            Experiência de compra digital, design de interface e jornada do usuário para loja online.
+          </div>
         </div>
       </div>
     </section>
-
     <!-- PROJETO DETALHADO: Orçamento de Serviços Express -->
     <section id="project-orcamento" class="project-details-container" style="display:none;">
       <!-- TODO: TODO o conteúdo detalhado do projeto "Orçamento de Serviços Express" -->
@@ -245,7 +256,6 @@
         <button id="back-to-projects-orcamento" class="btn-contato">Voltar para o início</button>
       </div>
     </section>
-
     <!-- PROJETO DETALHADO: E-commerce -->
     <section id="project-ecommerce" class="project-details-container" style="display:none;">
       <div class="hero-content">
@@ -269,18 +279,17 @@
         <button id="back-to-projects-ecommerce" class="btn-contato">Voltar para o início</button>
       </div>
     </section>
-
     <!-- FOOTER -->
-<div class="footer-social">
-  <a href="https://github.com/danielescheibler" target="_blank" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-  <a href="https://instagram.com/danieles.designer" target="_blank" class="icon-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-  <a href="https://www.linkedin.com/in/danielescheibler/" target="_blank" class="icon-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-<a href="https://danielescheibler.myportfolio.com/" target="_blank" class="icon-link" aria-label="Adobe Portfolio">
-  <img src="adobepf.png" alt="Adobe Portfolio" class="adobe-pf-icon">
-</a>
-  <a href="mailto:danielescheibler@gmail.com" class="icon-link" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
-  <a href="https://wa.me/5551997523656" target="_blank" class="icon-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-</div>
+    <div class="footer-social">
+      <a href="https://github.com/danielescheibler" target="_blank" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://instagram.com/danieles.designer" target="_blank" class="icon-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/danielescheibler/" target="_blank" class="icon-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://danielescheibler.myportfolio.com/" target="_blank" class="icon-link" aria-label="Adobe Portfolio">
+        <img src="adobepf.png" alt="Adobe Portfolio" class="adobe-pf-icon">
+      </a>
+      <a href="mailto:danielescheibler@gmail.com" class="icon-link" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/5551997523656" target="_blank" class="icon-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
     <section id="contato" class="container contato-section">
       <p>Desenvolvido por <b>Daniele Scheibler</b> • 2025</p>
     </section>
