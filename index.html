@@ -16,9 +16,9 @@
     <div class="site-hero-top">
       <img src="logo.png" alt="Logo Daniele Scheibler" class="site-logo">
       <!-- BOTÃO MENU HAMBURGUER MOBILE -->
-    <button class="menu-toggle" aria-label="Abrir menu" id="menu-toggle">
-  <img src="burger-bar.png" alt="Menu">
-</button>
+      <button class="menu-toggle" aria-label="Abrir menu" id="menu-toggle">
+        <img src="burger-bar.png" alt="Menu">
+      </button>
       <!-- MENU NAV -->
       <nav class="header-nav" id="header-nav">
         <a href="#projects-list" class="nav-link">Página Inicial</a>
@@ -27,6 +27,12 @@
       </nav>
       <!-- OVERLAY PARA O MENU MOBILE -->
       <div class="menu-overlay" id="menu-overlay"></div>
+      <!-- Botão PT|EN apenas no topo -->
+      <div class="header-lang">
+        <button class="lang-btn active" data-lang="pt">PT</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
     </div>
     <div class="site-hero-bottom">
       <div class="header-social">
@@ -34,17 +40,13 @@
         <a href="https://instagram.com/danieles.designer" target="_blank" class="icon-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/danielescheibler/" target="_blank" class="icon-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
       </div>
-      <div class="header-lang">
-        <button class="lang-btn active" data-lang="pt">PT</button> |
-        <button class="lang-btn" data-lang="en">EN</button>
-      </div>
+      <!-- REMOVIDO header-lang daqui -->
     </div>
     <!-- BOTÃO TEMA USANDO PNG -->
     <button id="theme-toggle" class="theme-float" aria-label="Alternar tema" title="Tema claro/escuro">
       <img id="theme-icon" src="noite.png" alt="Modo escuro" width="28" height="28">
     </button>
   </header>
-
   <main>
     <!-- SOBRE MIM -->
     <section id="sobre-mim" class="sobre-mim-container">
@@ -98,7 +100,6 @@
     </section>
     <!-- PROJETO DETALHADO: Orçamento de Serviços Express -->
     <section id="project-orcamento" class="project-details-container" style="display:none;">
-      <!-- TODO: TODO o conteúdo detalhado do projeto "Orçamento de Serviços Express" -->
       <div class="hero-content">
         <div class="hero-title-block">
           <h1>UX·UI<br>Designer</h1>
