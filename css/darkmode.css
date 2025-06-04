@@ -1,0 +1,65 @@
+[data-theme="dark"] {
+  --header-bg: #181f1f;
+  --accent: #fff;
+  --accent2: #40849e;
+  --white: #222;
+  --gray: #e3e3e3;
+  --gray-bg: #1f1f1f;
+  --social: #c7d0da;
+  --social-hover: #40849e;
+}
+
+/* --- AJUSTES PARA MODO ESCURO --- */
+[data-theme="dark"] .icon-link {
+  background: #1F1F1F !important;
+}
+[data-theme="dark"] .icon-link:hover,
+[data-theme="dark"] .icon-link:focus {
+  background: #40849e !important;
+  color: #fff !important;
+}
+[data-theme="dark"] .nav-link {
+  background: transparent !important;
+}
+/* SOBRE MIM - MODO ESCURO AJUSTES DE CORES */
+[data-theme="dark"] .sobre-mim-texto h2 {
+  color: #fff !important;
+}
+[data-theme="dark"] .perfil-titulo,
+[data-theme="dark"] .perfil-subtitulo,
+[data-theme="dark"] .card strong,
+[data-theme="dark"] .project-title {
+  color: #40849e !important;
+}
+[data-theme="dark"] .sobre-mim-texto p,
+[data-theme="dark"] .card p,
+[data-theme="dark"] .project-desc,
+[data-theme="dark"] .etapas-list,
+[data-theme="dark"] .project-overview,
+[data-theme="dark"] .project-details-container,
+[data-theme="dark"] .cards-row,
+[data-theme="dark"] .container,
+[data-theme="dark"] .project-info {
+  color: #fff !important;
+}
+[data-theme="dark"] .card {
+  background: #222 !important;
+}
+[data-theme="dark"] .project-card {
+  background: #222 !important;
+}
+[data-theme="dark"] .project-title {
+  color: #40849e !important;
+}
+[data-theme="dark"] .project-desc {
+  color: #fff !important;
+}
+[data-theme="dark"] .etapas-list {
+  color: #fff !important;
+}
+[data-theme="dark"] .menu-toggle img {
+  filter: brightness(0) invert(1);
+}
+[data-theme="dark"] .adobe-pf-icon {
+  filter: brightness(0) saturate(100%) invert(93%) sepia(1%) saturate(1300%) hue-rotate(163deg) brightness(103%) contrast(84%);
+}
