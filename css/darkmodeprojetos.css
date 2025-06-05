@@ -1,0 +1,47 @@
+/* ELEMENTOS DE PROJETOS/PÁGINAS INTERNAS */
+
+/* Títulos e textos dos cards e projetos */
+[data-theme="dark"] .card strong,
+[data-theme="dark"] .project-title {
+  color: #40849e !important;
+}
+[data-theme="dark"] .card p,
+[data-theme="dark"] .project-desc,
+[data-theme="dark"] .etapas-list,
+[data-theme="dark"] .project-overview,
+[data-theme="dark"] .project-details-container,
+[data-theme="dark"] .cards-row,
+[data-theme="dark"] .container,
+[data-theme="dark"] .project-info {
+  color: #fff !important;
+}
+
+/* Fundo dos cards/projetos */
+[data-theme="dark"] .card,
+[data-theme="dark"] .project-card {
+  background: #222 !important;
+}
+/* Título e descrição detalhada */
+[data-theme="dark"] .project-title {
+  color: #40849e !important;
+}
+[data-theme="dark"] .project-desc {
+  color: #fff !important;
+}
+/* Listas de etapas */
+[data-theme="dark"] .etapas-list {
+  color: #fff !important;
+}
+/* Blocos de recursos dos projetos */
+[data-theme="dark"] .project-feature {
+  background: #2c2c2c !important;
+}
+/* Ícones dos recursos dos projetos */
+[data-theme="dark"] .project-feature-icon img,
+[data-theme="dark"] .project-feature-icon i {
+  color: #fff !important;
+  filter: brightness(0) invert(1) !important;
+  opacity: 1 !important;
+}
+
+/* Não coloque regra para trocar imagem do gráfico aqui! */

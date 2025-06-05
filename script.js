@@ -45,6 +45,24 @@ Promise.all(partials.map(part =>
     }
   }
 
+  // 3.1. TROCA O GRÁFICO DO PROCESSO CONFORME TEMA
+  function atualizarGraficoProcesso() {
+    // Pode ter mais de um gráfico em algumas páginas, trate todos!
+    const graficos = document.querySelectorAll('#grafico-processo');
+    graficos.forEach(img => {
+      if (!img) return;
+      var tema = document.documentElement.getAttribute('data-theme');
+      img.src = (tema === "dark")
+        ? "assets/processodoprojeto_dark.png"
+        : "assets/processodoprojeto.png";
+    });
+  }
+  // Chama a função ao carregar partials (garante troca ao entrar na página)
+  atualizarGraficoProcesso();
+  // Observa mudanças no atributo data-theme no <html>
+  const observerGrafico = new MutationObserver(atualizarGraficoProcesso);
+  observerGrafico.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
   // 4. TEMA CLARO/ESCURO
   const themeToggle = document.getElementById('theme-toggle');
   const themeIcon = document.getElementById('theme-icon');
@@ -74,6 +92,7 @@ Promise.all(partials.map(part =>
       }
       atualizarFundoHero();
       atualizarIconeTema();
+      atualizarGraficoProcesso(); // Atualiza o gráfico manualmente ao clicar no botão!
     });
   }
 
@@ -171,6 +190,7 @@ Promise.all(partials.map(part =>
           if (card.dataset.project === "orcamento" && projectOrcamento) projectOrcamento.scrollIntoView({ behavior: 'smooth', block: 'start' });
           if (card.dataset.project === "ecommerce" && projectEcommerce) projectEcommerce.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 80);
+        atualizarGraficoProcesso(); // Garante troca do gráfico ao abrir detalhes
       });
     });
 

@@ -18,15 +18,11 @@
   max-width: 98vw;
   cursor: pointer;
   padding: 0 0 32px 0;
-  transition: transform .18s;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   margin-bottom: 10px;
-}
-.project-card:hover {
-  transform: translateY(-6px) scale(1.04);
 }
 .project-image {
   width: 100%;
@@ -35,8 +31,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 0;
-}
+ }
 .project-info {
   width: 100%;
   max-width: 420px;
@@ -89,10 +84,8 @@
   text-align: center;
   background: #fff;
   border-radius: 14px;
-  box-shadow: 9px 18px 50px rgba(70,128,153,0.07);
   padding: 1.4rem 1rem 1.2rem 1rem;
   margin: 0 0.3em;
-  transition: box-shadow .18s, transform .18s;
   font-size: 0.92rem;
 }
 .project-feature strong {
@@ -127,7 +120,6 @@
   display: inline-block;
   vertical-align: middle;
 }
-/* Se você tiver SVG <img>, pode tentar forçar: */
 .project-feature-icon img {
   filter: none !important;
   opacity: 0.8;
@@ -137,19 +129,9 @@
   min-height: 26px !important;
   max-width: 28px !important;
   max-height: 28px !important;
+  box-shadow: none !important;
+  transition: none !important;
 }
-
-/* HOVER mantém a cor */
-.project-feature:hover .project-feature-icon i,
-.project-feature:hover .project-feature-icon svg {
-  color: #40849e !important;
-  fill: #40849e !important;
-}
-.project-feature:hover .project-feature-icon img {
-  filter: none !important;
-}
-
-/* Se o dark mode precisar, pode ajustar assim: */
 [data-theme="dark"] .project-feature-icon i,
 [data-theme="dark"] .project-feature-icon svg {
   color: #40849e !important;
@@ -157,4 +139,41 @@
 }
 [data-theme="dark"] .project-feature-icon img {
   filter: none !important;
+}
+
+/* Layout responsivo dos ícones */
+.project-overview-icons.grid-2x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem 2.5rem;
+  justify-items: center;
+  align-items: stretch;
+  margin: 2.2rem 0 1.8rem 0;
+  background: transparent;
+  flex-wrap: unset;
+}
+@media (max-width: 900px) {
+  .project-overview-icons.grid-2x3 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+}
+@media (max-width: 650px) {
+  .project-overview-icons.grid-2x3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+}
+
+/* Gráfico do processo do projeto */
+#processo img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 900px;  /* Ajuste o tamanho máximo conforme necessário */
+  width: 100%;
+  height: auto;
+}
+#processo {
+  max-width: 100%;
 }
