@@ -1,0 +1,160 @@
+.projects-list-container {
+  max-width: 1100px;
+  margin: 40px auto 56px auto;
+  padding: 0 2vw;
+  box-sizing: border-box;
+}
+.projects-list-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px;
+  justify-content: center;
+  align-items: stretch;
+}
+.project-card {
+  background: #fff;
+  border-radius: 18px;
+  width: 420px;
+  max-width: 98vw;
+  cursor: pointer;
+  padding: 0 0 32px 0;
+  transition: transform .18s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+.project-card:hover {
+  transform: translateY(-6px) scale(1.04);
+}
+.project-image {
+  width: 100%;
+  height: 290px;
+  border-radius: 18px 18px 0 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+}
+.project-info {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 36px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #40849e;
+  margin: 18px 0 6px 0;
+  text-align: center;
+  letter-spacing: -1px;
+}
+.project-desc {
+  font-size: 1.07rem;
+  color: #5a5a5a;
+  opacity: 0.87;
+  text-align: center;
+  margin: 0 14px 0 14px;
+  margin-bottom: 16px;
+  max-width: 420px;
+}
+.project-details-container {
+  max-width: 900px;
+  margin: 0 auto 48px auto;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  background: transparent;
+  border-radius: 16px;
+}
+.project-overview-icons {
+  display: flex;
+  color: #40849e;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2.2rem 0 1.8rem 0;
+  flex-wrap: wrap;
+  background: transparent;
+}
+.project-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 210px;
+  max-width: 300px;
+  min-width: 180px;
+  text-align: center;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 9px 18px 50px rgba(70,128,153,0.07);
+  padding: 1.4rem 1rem 1.2rem 1rem;
+  margin: 0 0.3em;
+  transition: box-shadow .18s, transform .18s;
+  font-size: 0.92rem;
+}
+.project-feature strong {
+  font-size: 0.98rem;
+  color: #40849e;
+}
+.project-feature p {
+  color: var(--gray);
+  font-size: 0.92rem;
+  margin: 0;
+  opacity: 0.89;
+}
+.project-feature-icon {
+  margin-bottom: 0.7rem;
+  display: flex;
+  color: #40849e !important;
+  justify-content: center;
+  align-items: center;
+}
+.project-feature-icon i,
+.project-feature-icon svg {
+  color: #40849e !important;
+  fill: #40849e !important;
+  font-size: 1.25rem !important;
+  width: 26px !important;
+  height: 26px !important;
+  min-width: 26px !important;
+  min-height: 26px !important;
+  max-width: 28px !important;
+  max-height: 28px !important;
+  opacity: 0.8;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* Se você tiver SVG <img>, pode tentar forçar: */
+.project-feature-icon img {
+  filter: none !important;
+  opacity: 0.8;
+  width: 26px !important;
+  height: 26px !important;
+  min-width: 26px !important;
+  min-height: 26px !important;
+  max-width: 28px !important;
+  max-height: 28px !important;
+}
+
+/* HOVER mantém a cor */
+.project-feature:hover .project-feature-icon i,
+.project-feature:hover .project-feature-icon svg {
+  color: #40849e !important;
+  fill: #40849e !important;
+}
+.project-feature:hover .project-feature-icon img {
+  filter: none !important;
+}
+
+/* Se o dark mode precisar, pode ajustar assim: */
+[data-theme="dark"] .project-feature-icon i,
+[data-theme="dark"] .project-feature-icon svg {
+  color: #40849e !important;
+  fill: #40849e !important;
+}
+[data-theme="dark"] .project-feature-icon img {
+  filter: none !important;
+}

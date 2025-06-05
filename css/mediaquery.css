@@ -1,6 +1,6 @@
 @media (max-width: 1200px) {
   .container { max-width: 98vw; }
-  .hero-avatar { max-width: 60vw; }
+  .hero-avatar { max-width: 30vw; }
 }
 @media (max-width: 900px) {
   .site-hero-top { padding-left: 8px; }
@@ -16,6 +16,7 @@
   .project-card { width: 98vw; }
   .project-image { height: 190px;}
   .project-info, .project-title, .project-desc { max-width: 98vw; }
+  .project-overview-icons { gap: 1.2rem; }
 }
 @media (max-width: 700px) {
   .container,
@@ -80,9 +81,18 @@
   .project-title { font-size: 1.21rem; }
   .project-desc, .sobre-mim-texto, .card p { font-size: 1.13rem; }
   .sobre-mim-content { flex-direction: column; align-items: center; gap: 1.7rem; }
-  .sobre-mim-texto { text-align: center; }
+  .sobre-mim-texto { text-align: justify; }
   .perfil-tecnologias { justify-content: center; }
-  .sobre-mim-foto { width: 70px; height: 70px; }
+  .sobre-mim-foto { width: 70px; height: 120px; }
+  .project-overview-icons {
+    flex-direction: column;
+    gap: 2.2rem;
+    align-items: stretch;
+  }
+  .project-feature {
+    max-width: 100vw;
+    min-width: 0;
+  }
 }
 @media (max-width: 500px) {
   .container,
@@ -106,4 +116,17 @@
   #back-to-top, .theme-float { left: 0.7rem; right: auto; bottom: 0.7rem; }
   .img-fluid { max-width: 96vw; }
   .hero-title-block h1 { font-size: 1.3rem; }
+  .project-overview-icons { gap: 1.2rem; }
+}
+@media (max-width: 700px) {
+  .perfil-tecnologias img {
+    width: 22px !important;
+    height: 22px !important;
+  }
+}
+@media (max-width: 500px) {
+  .perfil-tecnologias img {
+    width: 17px !important;
+    height: 17px !important;
+  }
 }
