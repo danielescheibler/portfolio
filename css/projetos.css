@@ -376,19 +376,17 @@
 }
 .persona-row {
   display: grid;
-  grid-template-columns: 125px repeat(5, 1fr);
+  grid-template-columns: 200px repeat(5, 1fr);
   min-width: 640px;
 }
 .persona-header {
-  background: #d4edf6;
   font-weight: 700;
   color: #24455a;
   border-radius: 10px 10px 0 0;
   font-size: 0.95rem;
 }
 .persona-row:not(.persona-header) {
-  background: #fff;
-  border-bottom: 1px solid #e0e0e0;
+ border-bottom: 1px solid #e0e0e0;
 }
 .persona-row:last-child {
   border-radius: 0 0 10px 10px;
@@ -446,37 +444,85 @@
 }
 
 /* =========================
-   PERSONA BÁSICA (FOTO + DADOS)
+   PERSONA BÁSICA (FOTO + DADOS, RESUMO, OBJETIVOS/FRUSTRAÇÕES)
    ========================= */
 .persona-row.ficha {
-  align-items: center;
-  gap: 1rem;
-  display: grid;
-  grid-template-columns: 200px repeat(5, 1fr);
-  min-width: 500px;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 1.2rem;
 }
-.persona-photo {
-  width: 140px;
-  height: 140px;
-  flex-shrink: 0;
+
+/* AJUSTE PARA FOTO DA PERSONA - SÓ VALE PARA FOTO DA PERSONA! */
+#personas .persona-photo {
+  width: 190px !important;
+  height: 190px !important;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 10px !important;
+  margin: 0 !important;
+  display: block;
 }
+
 .persona-basic {
-  flex: 2 1 0;     
-  min-width: 400px;    
-  width: auto;      
-  max-width: 100%;  
-}
-.persona-summary {
+  min-width: 260px;
   max-width: 700px;
-  border: 1.5px solid #40849e;  
-  border-radius: 7px;            
-  padding: 1rem;                
-  color: #232323;               
-  font-size: 1.06rem;          
-  background: transparent;      
-  margin: 0.5rem auto;
+  width: 100%;
+}
+.persona-name {
+  color: #40849e;
+  font-size: 1.7rem;
+  text-align: left;
+  margin: 0 0 12px 0;
+  padding-left: 10px;
+}
+.persona-basic ul {
+  margin: 0 0 12px 10px;
+  padding: 0;
+  list-style: none;
+}
+.persona-basic ul li {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+/* Resumo da persona centralizado */
+.persona-summary {
+  min-width: 260px;
+  max-width: 700px;
+  margin: 0.8rem auto;
+  padding: 0.8rem 1.2rem;
+  border-left: 3px solid #40849e;
+  border-radius: 7px;
+  color: #232323;
+  background: #f7fbfc;
+  font-size: 1rem;
+  text-align: justify;
+  display: block;
+}
+/* Objetivos e frustrações como texto normal */
+.persona-objetivos-frustracoes {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.persona-objetivos-frustracoes > div {
+  flex: 1;
+  max-width: 400px;
+  
+}
+.persona-objetivos-frustracoes strong {
+  color: #40849e;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 6px;
+}
+.persona-objetivos-frustracoes p {
+  margin: 0.3rem 0;
+  color: #444;
+  font-size: 1rem;
+}
+@media (max-width: 800px) {
+  .persona-row.ficha { flex-direction: column; align-items: center; }
+  .persona-objetivos-frustracoes { flex-direction: column; gap: 1rem; }
 }
 
 /* =========================
