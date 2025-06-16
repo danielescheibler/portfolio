@@ -42,3 +42,15 @@
 [data-theme="dark"] .adobe-pf-icon {
   filter: brightness(0) saturate(100%) invert(93%) sepia(1%) saturate(1300%) hue-rotate(163deg) brightness(103%) contrast(84%);
 }
+[data-theme="dark"] .card,
+[data-theme="dark"] .project-card {
+  border: 1.5px solid #fff !important;
+   padding: 0;
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden; /* importante para que a imagem arredondada acompanhe o card */
+  border: 1.5px solid #fff; /* já garantido no darkmode */
+  background: #222; /* ou sua cor de fundo */
+
+}
+

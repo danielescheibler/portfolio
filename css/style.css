@@ -27,6 +27,29 @@ body {
   overflow-x: hidden;
 }
 
+/* ====== CONTAINER PADRÃO ====== */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 4rem;   /* ~64px (4 dedos) */
+  padding-right: 4rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+  background: transparent;
+  box-sizing: border-box;
+  text-align: left !important;
+}
+.container h1, 
+.container h2, 
+.container h3, 
+.container h4, 
+.container h5, 
+.container h6 {
+  text-align: left !important;
+}
+
+/* ========== HEADER, NAV, HERO ========== */
 .site-hero {
   position: relative;
   min-height: 615px;
@@ -233,12 +256,8 @@ body {
   max-height: 32px;
   object-fit: contain;
 }
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
-  background: transparent;
-}
+
+/* ========== HERO CONTENT ========== */
 .hero-content {
   display: flex;
   align-items: center;
@@ -284,6 +303,7 @@ body {
   margin-top: 1.8rem;
 }
 
+/* ========== CARDS, GRIDS ========== */
 .cards-row {
   display: flex;
   gap: 1.5rem;
@@ -375,6 +395,8 @@ li {
 .contato-section {
   text-align: center;
 }
+
+/* ========== BOTÃO VOLTAR AO TOPO ========== */
 #back-to-top {
   position: fixed;
   bottom: 2rem;
@@ -399,13 +421,15 @@ li {
   transform: scale(1.13);
 }
 
+/* ========== SOBRE, PERFIL, ETC ========== */
 .sobre-mim-container {
   background: transparent;
   margin: 0 auto 0 auto;
-  max-width: 900px;
-  padding: 3rem 1.5rem 2.2rem 1.5rem;
+  max-width: 1200px;
+  padding: 3rem 4rem 2.2rem 4rem;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
 }
 .sobre-mim-content {
   display: flex;
@@ -466,6 +490,7 @@ li {
   padding: 3px;
 }
 
+/* ========== MENU OVERLAY ========== */
 .menu-overlay {
   display: none;
 }
@@ -479,6 +504,7 @@ li {
   z-index: 10;
 }
 
+/* ========== FOOTER ========== */
 .footer-social {
   display: flex;
   justify-content: center;
@@ -504,4 +530,73 @@ li {
   outline: none !important;
   vertical-align: middle;
   background-clip: padding-box;
+}
+
+/* ========== TÍTULO COM LINHA COLORIDA ========== */
+.container h2, section.container > h2 {
+  text-align: left !important;
+  position: relative;
+  display: inline-block;
+  padding-left: 22px;
+}
+.container h2::before, section.container > h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 60%;
+  background: #40849e;
+  border-radius: 3px;
+}
+
+/* ========== TEXTOS JUSTIFICADOS ========== */
+#textos {
+  text-align: justify;
+}
+
+/* ========== EXCLUSIVO "Pesquisa com Usuários" ========== */
+#pesquisa-usuarios h2 {
+  text-align: justify;
+  display: block;
+  position: relative;
+  padding-left: 22px;
+}
+#pesquisa-usuarios h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 60%;
+  background: #40849e;
+  border-radius: 3px;
+}
+#pesquisa-usuarios p,
+#pesquisa-usuarios .project-desc,
+#pesquisa-usuarios li {
+  text-align: justify;
+}
+#pesquisa-usuarios img {
+  display: block;
+  margin-bottom: 1em;
+  max-width: 100%;
+  height: auto;
+}
+.footer-copy {
+  text-align: center !important;
+  color: #888;
+  font-size: 0.98rem;
+  padding: 0.7rem 0 1.2rem 0;
+}
+@media (max-width: 700px) {
+  #back-to-top {
+    left: auto;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.7rem 0.8rem;
+    font-size: 1.35rem;
+  }
 }

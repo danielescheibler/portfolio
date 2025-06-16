@@ -1,13 +1,11 @@
 /* ========== PADRÃO DE MARGENS LATERAIS ========== */
 /* Desktop grande */
-
-
 @media (min-width: 1201px) {
   .container,
   .sobre-mim-container,
   .project-details-container {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -274,6 +272,23 @@
     background: #fafdff;
     text-align: center;
   }
+
+  /* ===== AJUSTES DE IMAGEM DE CAPA DO PROJETO ===== */
+  .project-card {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .project-image {
+    aspect-ratio: 16/10;
+    min-height: 140px;
+    width: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px 14px 0 0;
+    margin: 0;
+    display: block;
+  }
 }
 
 @media (max-width: 600px) {
@@ -327,7 +342,10 @@
     margin-right: auto;
   }
   .card, .project-card {
-    padding: 1.1rem 0.7rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
     min-width: 97vw;
     font-size: 1.11rem;
     margin: 0 auto;
@@ -352,6 +370,23 @@
     height: auto !important;
     display: block;
     margin: 0 auto;
+  }
+
+  /* ===== AJUSTES DE IMAGEM DE CAPA DO PROJETO (mobile menor) ===== */
+  .project-card {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .project-image {
+    aspect-ratio: 16/10;
+    min-height: 110px;
+    width: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px 14px 0 0;
+    margin: 0;
+    display: block;
   }
 }
 
