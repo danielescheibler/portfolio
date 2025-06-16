@@ -21,27 +21,114 @@
 [data-theme="dark"] .project-card {
   background: #222 !important;
 }
-/* Título e descrição detalhada */
-[data-theme="dark"] .project-title {
-  color: #40849e !important;
-}
-[data-theme="dark"] .project-desc {
-  color: #fff !important;
-}
-/* Listas de etapas */
-[data-theme="dark"] .etapas-list {
-  color: #fff !important;
-}
+
 /* Blocos de recursos dos projetos */
 [data-theme="dark"] .project-feature {
   background: #2c2c2c !important;
-}
-/* Ícones dos recursos dos projetos */
-[data-theme="dark"] .project-feature-icon img,
-[data-theme="dark"] .project-feature-icon i {
   color: #fff !important;
-  filter: brightness(0) invert(1) !important;
+}
+[data-theme="dark"] .project-feature strong,
+[data-theme="dark"] .project-feature-title {
+  color: #40849e !important;
+}
+[data-theme="dark"] .project-feature-icon i,
+[data-theme="dark"] .project-feature-icon svg {
+  color: #40849e !important;
+  filter: none !important;
+}
+[data-theme="dark"] .project-feature-icon img {
+  filter: none !important;
   opacity: 1 !important;
 }
+[data-theme="dark"] .project-feature,
+[data-theme="dark"] .project-feature * {
+  color: #fff !important;
+}
+[data-theme="dark"] .project-feature strong,
+[data-theme="dark"] .project-feature-title {
+  color: #40849e !important;
+}
 
-/* Não coloque regra para trocar imagem do gráfico aqui! */
+/* Tabela de Persona */
+[data-theme="dark"] .persona-container {
+  background: #181d1e !important;
+  color: #fff !important;
+}
+[data-theme="dark"] .persona-head strong,
+[data-theme="dark"] .persona-head .persona-name {
+  color: #40849e !important;
+}
+[data-theme="dark"] .persona-head p,
+[data-theme="dark"] .persona-goal {
+  color: #fff !important;
+}
+[data-theme="dark"] .persona-layout {
+  background: #2C2C2C !important;
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+[data-theme="dark"] .persona-row {
+  background: transparent;
+}
+[data-theme="dark"] .persona-header,
+[data-theme="dark"] .persona-row {
+  border-color: #34434d !important;
+}
+[data-theme="dark"] .persona-col {
+  background: transparent;
+  color: #fff !important;
+  border-color: #34434d !important;
+}
+[data-theme="dark"] .persona-label,
+[data-theme="dark"] .persona-header .persona-col {
+  color: #40849e !important;
+  font-weight: bold;
+}
+[data-theme="dark"] .persona-col b,
+[data-theme="dark"] .persona-col strong {
+  color: #40849e !important;
+  font-weight: bold;
+}
+[data-theme="dark"] .persona-col i,
+[data-theme="dark"] .persona-col svg {
+  color: #40849e !important;
+}
+[data-theme="dark"] .persona-label {
+  background: transparent !important;
+}
+
+/* Persona Mobile */
+[data-theme="dark"] .persona-mobile {
+  color: #fff !important;
+  border-radius: 0.7rem;
+  padding: 1.5rem 1.2rem;
+}
+[data-theme="dark"] .persona-mobile .persona-name {
+  color: #40849e !important;
+}
+[data-theme="dark"] .persona-mobile .persona-basic ul,
+[data-theme="dark"] .persona-mobile .persona-basic li {
+  color: #fff !important;
+}
+[data-theme="dark"] .persona-mobile .persona-basic strong {
+  color: #40849e !important;
+  font-weight: bold;
+}
+
+/* Quadro resumo (caixa branca no light) - borda azul à esquerda e sombra, sem fundo no dark */
+[data-theme="dark"] .persona-mobile .persona-summary {
+  background: #2C2C2C;
+  color: #fff !important;
+  border-radius: 10px;
+   border-left: 3px solid #40849e;
+    padding: 1.2rem 1.1rem;
+  margin: 0 auto;
+}
+
+/* Objetivos & Frustrações - títulos azul, textos brancos */
+[data-theme="dark"] .persona-objetivos-frustracoes strong {
+  color: #40849e !important;
+}
+[data-theme="dark"] .persona-objetivos-frustracoes p {
+  color: #fff !important;
+}

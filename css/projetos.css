@@ -1,6 +1,10 @@
 /* =========================
    CARDS DE PROJETOS/CAPAS
    ========================= */
+strong, b, a {
+  color: #40849e;
+}
+
 .projects-list-container {
   max-width: 1100px;
   margin: 40px auto 56px auto;

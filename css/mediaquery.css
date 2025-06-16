@@ -1,9 +1,44 @@
+/* ========== PADRÃO DE MARGENS LATERAIS ========== */
+/* Desktop grande */
+
+
+@media (min-width: 1201px) {
+  .container,
+  .sobre-mim-container,
+  .project-details-container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Até 1200px */
 @media (max-width: 1200px) {
-  .container { max-width: 98vw; }
+  .container,
+  .sobre-mim-container,
+  .project-details-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 98vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .hero-avatar { max-width: 30vw; }
 }
 
+/* Até 900px */
 @media (max-width: 900px) {
+  .container,
+  .sobre-mim-container,
+  .project-details-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 99vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .site-hero-top { padding-left: 8px; }
   .site-logo { height: 29px; margin-left: 20px; margin-right: 16px; }
   .header-nav { gap: 1.1rem; }
@@ -20,19 +55,43 @@
   .project-overview-icons { gap: 1.2rem; }
 }
 
+/* Até 700px */
 @media (max-width: 700px) {
   .container,
   .sobre-mim-container,
   .project-details-container {
-    padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     max-width: 99vw;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #mapa {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
   }
   .cards-row, .projects-list-grid {
-    padding-left: 0.6rem;
-    padding-right: 0.6rem;
+    padding-left: 0;
+    padding-right: 0;
     gap: 1.2rem;
     justify-content: center;
+  }
+  /* Justificar texto nos blocos principais do persona mobile */
+  .persona-mobile .persona-summary,
+  .persona-mobile .persona-objetivos-frustracoes p,
+  .persona-mobile .persona-basic,
+  .persona-mobile .persona-basic li {
+    text-align: justify !important;
+  }
+  .persona-objetivos-frustracoes p {
+    text-align: justify !important;
   }
   .site-hero-top {
     flex-direction: row;
@@ -218,6 +277,18 @@
 }
 
 @media (max-width: 600px) {
+  .container,
+  .sobre-mim-container,
+  .project-details-container {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    max-width: 99vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .persona-details {
     flex-direction: column;
     gap: 0.6rem;
@@ -246,9 +317,14 @@
   .container,
   .sobre-mim-container,
   .project-details-container {
-    padding: 1.6rem 0.7rem 1.6rem 0.7rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
     max-width: 99vw;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   .card, .project-card {
     padding: 1.1rem 0.7rem;
@@ -269,4 +345,37 @@
     width: 17px !important;
     height: 17px !important;
   }
+  #mapa {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* Garantir imagens não ultrapassam margens */
+#processo picture,
+#processo img,
+#processo source {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  #processo picture,
+  #processo img {
+    max-width: 100%;
+  }
+}
+.container h1, 
+.container h2, 
+.container h3, 
+.container h4, 
+.container h5, 
+.container h6 {
+  text-align: left !important;
 }
