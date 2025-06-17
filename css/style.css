@@ -593,10 +593,15 @@ li {
 }
 @media (max-width: 700px) {
   #back-to-top {
-    left: auto;
-    right: 1rem;
+     left: 1rem;
+    right: auto;
     bottom: 1rem;
-    padding: 0.7rem 0.8rem;
-    font-size: 1.35rem;
+    z-index: 1001;
+  }
+  .theme-float {
+    right: 1rem; 
+    left: auto;
+    bottom: 1rem;
+    z-index: 1002;
   }
 }

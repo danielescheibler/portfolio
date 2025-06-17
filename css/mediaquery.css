@@ -67,6 +67,13 @@
     margin-left: auto;
     margin-right: auto;
   }
+   #processo #proximos-passos {
+    display: block;
+    width: 100%;
+    max-width: 180px; /* ou outro valor que preferir */
+    height: auto;
+    margin: 0 auto;
+  }
   #mapa {
     width: 100%;
     max-width: 100%;
@@ -413,4 +420,18 @@
 .container h5, 
 .container h6 {
   text-align: left !important;
+}
+@media (max-width: 700px) {
+  #back-to-top {
+    right: 1rem;
+    left: auto;
+    bottom: 1rem;
+    z-index: 1001;
+  }
+  .theme-float {
+    left: 1rem;
+    right: auto;
+    bottom: 1rem;
+    z-index: 1002;
+  }
 }
