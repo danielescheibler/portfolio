@@ -78,9 +78,21 @@ strong, b, a {
   font-size: 1.07rem;
   color: #5a5a5a;
   opacity: 0.87;
-  text-align: center;
+  text-align: left;
   margin: 0 0 16px 0;
   max-width: 100%;
+}
+
+.titulo-maior {
+  font-size: 1.4em;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.icon-titulo {
+  margin-right: 8px;
+  color: #3D758A; /* ou a cor que preferir */
 }
 
 /* =========================
@@ -373,7 +385,7 @@ strong, b, a {
 }
 .persona-name {
   color: #40849e;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
 }
 .persona-goal {
   font-size: 0.96rem;
@@ -387,8 +399,8 @@ strong, b, a {
 }
 .persona-row {
   display: grid;
-  grid-template-columns: 200px repeat(5, 1fr);
-  min-width: 640px;
+  grid-template-columns: 150px repeat(5, 1fr);
+  min-width: 930px; /* antes era 640px, aumente para garantir espaço */
 }
 .persona-header {
   font-weight: 700;
@@ -405,7 +417,7 @@ strong, b, a {
 }
 .persona-col {
   padding: 0.36rem 0.4rem;
-  font-size: 0.89rem;
+  font-size: 0.9rem;
   border-right: 1px solid #e0e0e0;
   min-width: 80px;
   vertical-align: top;
@@ -428,9 +440,9 @@ strong, b, a {
     max-width: 99vw;
   }
   .persona-row {
-    grid-template-columns: 60px repeat(5, minmax(80px, 1fr));
+    grid-template-columns: 50px repeat(5, minmax(80px, 1fr));
     font-size: 0.84rem;
-    min-width: 480px;
+    min-width: 900px;     
   }
   .persona-col, .persona-label {
     padding: 0.22rem 0.2rem;
@@ -442,10 +454,10 @@ strong, b, a {
   .persona-container {
     padding: 0.4rem 0.1rem 0.6rem 0.1rem;
   }
-  .persona-row {
+   .persona-row {
     font-size: 0.77rem;
     grid-template-columns: 38px repeat(5, minmax(48px, 1fr));
-    min-width: 320px;
+    min-width: 700px; /* mantenha maior que 320px para não cortar */
   }
   .persona-col, .persona-label {
     padding: 0.14rem 0.1rem;
@@ -517,7 +529,7 @@ strong, b, a {
 }
 .persona-objetivos-frustracoes > div {
   flex: 1;
-  max-width: 400px;
+  max-width: 600px;
 }
 .persona-objetivos-frustracoes strong {
   color: #40849e;

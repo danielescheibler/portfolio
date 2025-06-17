@@ -72,7 +72,7 @@
   <h2 data-i18n="orcamento-desenvolvimento">Desenvolvimento do Projeto</h2>
   <picture>
     <source srcset="assets/processodoprojeto_mobile.png" media="(max-width: 700px)">
-    <img id="grafico-processo" src="assets/processodoprojeto.png" alt="Gráfico do processo do projeto">
+    <img id="grafico-processo" data-i18n-img="processo-img" src="assets/processodoprojeto.png" alt="Gráfico do processo do projeto">
   </picture>
 </section>
 
@@ -110,31 +110,43 @@
     </div>
   </div>
   
-  <div class="project-desc" style="max-width:900px;">
-    <strong data-i18n="orcamento-roteiro-title">Roteiro de pesquisa:</strong>
-  </div>
+<div class="project-desc" style="max-width:900px;">
+  <strong class="titulo-maior" data-i18n="orcamento-roteiro-title">Roteiro de pesquisa:</strong>
+</div>
 
-  <p><strong data-i18n="orcamento-perguntas-quantitativas">Perguntas quantitativas:</strong></p>
-  <ol class="perguntas-lista">
-    <li><span class="numero">1.</span> Com que frequência você precisa solicitar orçamentos para projetos de vídeo ou motion design?</li>
-    <li><span class="numero">2.</span> Em média, quantos minutos você gasta atualmente para obter um orçamento de edição de vídeo?</li>
-    <li><span class="numero">3.</span> Em uma escala de 1 a 5, quanta clareza você sente em relação ao escopo e ao prazo ao receber um orçamento tradicional/manual?</li>
-  </ol>
+<p>
+  <strong data-i18n="orcamento-perguntas-quantitativas">
+    <i class="fas fa-chart-bar icon-titulo"></i>Perguntas quantitativas:</strong>
+</p>
+<ol class="perguntas-lista">
+  <li><span class="numero">1.</span> <span data-i18n="orcamento-pergunta-1">Com que frequência você precisa solicitar orçamentos para projetos de vídeo ou motion design?</span></li>
+  <li><span class="numero">2.</span> <span data-i18n="orcamento-pergunta-2">Em média, quantos minutos você gasta atualmente para obter um orçamento de edição de vídeo?</span></li>
+  <li><span class="numero">3.</span> <span data-i18n="orcamento-pergunta-3">Em uma escala de 1 a 5, quanta clareza você sente em relação ao escopo e ao prazo ao receber um orçamento tradicional/manual?</span></li>
+</ol>
 
-  <p><strong data-i18n="orcamento-perguntas-qualitativas">Perguntas qualitativas:</strong></p>
-  <ol class="perguntas-lista" start="4">
-    <li><span class="numero">4.</span> Quais são as maiores dificuldades que você enfrenta ao solicitar ou fornecer orçamentos para projetos criativos?</li>
-    <li><span class="numero">5.</span> Descreva uma experiência em que houve falta de clareza no escopo, prazo ou valor ao pedir um orçamento. O que aconteceu?</li>
-    <li><span class="numero">6.</span> Quais informações você considera indispensáveis ao descrever um projeto de vídeo para orçamento?</li>
-    <li><span class="numero">7.</span> O que faz um orçamento ser considerado transparente e confiável por você?</li>
-    <li><span class="numero">8.</span> Se pudesse mudar algo nos processos tradicionais de orçamento, o que seria?</li>
-    <li><span class="numero">9.</span> Como seria, para você, o processo ideal de solicitação e recebimento de orçamentos para vídeos/motion?</li>
-  </ol>
+<p>
+  <strong data-i18n="orcamento-perguntas-qualitativas">
+    <i class="fas fa-comments icon-titulo"></i>Perguntas qualitativas:
+  </strong>
+</p>
+<ol class="perguntas-lista" start="4">
+  <li><span class="numero">4.</span> <span data-i18n="orcamento-pergunta-4">Quais são as maiores dificuldades que você enfrenta ao solicitar ou fornecer orçamentos para projetos criativos?</span></li>
+  <li><span class="numero">5.</span> <span data-i18n="orcamento-pergunta-5">Descreva uma experiência em que houve falta de clareza no escopo, prazo ou valor ao pedir um orçamento. O que aconteceu?</span></li>
+  <li><span class="numero">6.</span> <span data-i18n="orcamento-pergunta-6">Quais informações você considera indispensáveis ao descrever um projeto de vídeo para orçamento?</span></li>
+  <li><span class="numero">7.</span> <span data-i18n="orcamento-pergunta-7">O que faz um orçamento ser considerado transparente e confiável por você?</span></li>
+  <li><span class="numero">8.</span> <span data-i18n="orcamento-pergunta-8">Se pudesse mudar algo nos processos tradicionais de orçamento, o que seria?</span></li>
+  <li><span class="numero">9.</span> <span data-i18n="orcamento-pergunta-9">Como seria, para você, o processo ideal de solicitação e recebimento de orçamentos para vídeos/motion?</span></li>
+</ol>
 
-  <p><strong data-i18n="orcamento-pergunta-impacto">Pergunta sobre impacto e adoção:</strong></p>
-  <ol class="perguntas-lista" start="10">
-    <li><span class="numero">10.</span> De que forma uma solução digital automatizada poderia facilitar seu dia a dia nesse tipo de trabalho? Você enxerga algum benefício ou limitação?</li>
-  </ol>
+<p>
+  <strong data-i18n="orcamento-pergunta-impacto">
+    <i class="fas fa-bolt icon-titulo"></i>Pergunta sobre impacto e adoção:
+  </strong>
+</p>
+<ol class="perguntas-lista" start="10">
+  <li><span class="numero">10.</span> <span data-i18n="orcamento-pergunta-10">De que forma uma solução digital automatizada poderia facilitar seu dia a dia nesse tipo de trabalho? Você enxerga algum benefício ou limitação?</span></li>
+</ol>
+
 </section>
 
     <section class="container">
@@ -172,11 +184,16 @@
       <div class="persona-basic">
         <h3 class="persona-name" data-i18n="persona-nome">Alice</h3>
         <ul>
-          <li><strong data-i18n="persona-idade">Idade:</strong> <span data-i18n="persona-idade">28 anos</span></li>
-          <li><strong data-i18n="persona-formacao">Formação:</strong> <span data-i18n="persona-formacao">Designer Gráfico</span></li>
-          <li><strong data-i18n="persona-cidade">Cidade:</strong> <span data-i18n="persona-cidade">Porto Alegre/RS</span></li>
-          <li><strong data-i18n="persona-familia">Família:</strong> <span data-i18n="persona-familia">Mora sozinha</span></li>
-          <li><strong data-i18n="persona-profissao">Profissão:</strong> <span data-i18n="persona-profissao">Editora autônoma</span></li>
+          <li><strong data-i18n="persona-idade-label">Idade:</strong> 
+            <span data-i18n="persona-idade">28 anos</span></li>
+          <li><strong data-i18n="persona-formacao-label">Formação:</strong> 
+            <span data-i18n="persona-formacao">Designer Gráfico</span></li>
+          <li><strong data-i18n="persona-cidade-label">Cidade:</strong> 
+            <span data-i18n="persona-cidade">Porto Alegre/RS</span></li>
+          <li><strong data-i18n="persona-familia-label">Família:</strong> 
+            <span data-i18n="persona-familia">Mora sozinha</span></li>
+          <li><strong data-i18n="persona-profissao-label">Profissão:</strong> 
+            <span data-i18n="persona-profissao">Editora autônoma</span></li>
         </ul>
         <div class="persona-summary" data-i18n="persona-summary">
           Alice é editora freelancer de 28 anos, atende pequenas empresas e influencers no Brasil e mora sozinha. Valoriza orçamentos rápidos e claros para focar na parte criativa e equilibrar vida pessoal e profissional. Frustra-se com briefings incompletos, negociação pouco transparente e excesso de mensagens.
@@ -185,31 +202,36 @@
         <div class="persona-objetivos-frustracoes">
           <div>
             <strong data-i18n="persona-objetivos-title">Objetivos</strong>
-            <p data-i18n="persona-objetivo-1">• Orçar projetos de vídeo e motion de forma ágil, sem burocracia.</p>
-            <p data-i18n="persona-objetivo-2">• Receber briefings claros para evitar retrabalho.</p>
-            <p data-i18n="persona-objetivo-3">• Ter previsibilidade de prazos e valores para planejar sua agenda e renda.</p>
-          </div>
+           <ul>
+        <li data-i18n="persona-objetivo-1">• Orçar projetos de vídeo e motion de forma ágil, sem burocracia.</li>
+        <li data-i18n="persona-objetivo-2">• Receber briefings claros para evitar retrabalho.</li>  
+        <li data-i18n="persona-objetivo-3">• Ter previsibilidade de prazos e valores para planejar sua agenda e renda.</li>  
+      </ul>
           <div>
             <strong data-i18n="persona-frustracoes-title">Frustrações</strong>
-            <p data-i18n="persona-frustracao-1">• Perco tempo trocando mensagens só para entender o que o cliente quer.</p>
-            <p data-i18n="persona-frustracao-2">• Os briefings vêm incompletos, e isso gera retrabalho.</p>
-          </div>
+         <ul>
+        <li data-i18n="persona-frustracao-1">Perco tempo trocando mensagens só para entender o que o cliente quer.</li>
+         <li data-i18n="persona-frustracao-2">Os briefings vêm incompletos, e isso gera retrabalho.</li>
+         </ul>
         </div>
-      </div>
     </div>
   </section>
 </section>
 
-   <section class="container">
+ <section class="container">
   <h2 data-i18n="jornada-title">Jornada do Usuário</h2>
   <p id="textos" data-i18n="jornada-desc">Criei um mapa da jornada do usuário com a experiência da Alice ao usar o site para ajudar a identificar possíveis pontos de dor e oportunidades de melhoria.</p>
 
   <section class="persona-container">
     <div class="persona-head">
-      <strong>Persona: <span class="persona-name" data-i18n="persona-nome">Alice</span></strong>
-      <p class="persona-goal" data-i18n="jornada-goal">
-        Goal: Facilitar e agilizar o recebimento e resposta de pedidos de orçamento de edição de vídeo e de motion.
-      </p>
+      <strong>
+        <span data-i18n="persona-label">Persona:</span>
+        <span class="persona-name" data-i18n="persona-nome">Alice</span>
+      </strong>
+  <p class="persona-goal">
+  <span data-i18n="jornada-goal-label">Goal:</span>
+  <span data-i18n="jornada-goal">Facilitar e agilizar o recebimento e resposta de pedidos de orçamento de edição de vídeo e de motion.</span>
+</p>
     </div>
     <div class="persona-layout">
       <div class="persona-row persona-header">
@@ -223,70 +245,70 @@
       <div class="persona-row">
         <div class="persona-col persona-label" data-i18n="jornada-tarefas">Lista de tarefas</div>
         <div class="persona-col">
-          <b>A.</b> Buscar plataformas confiáveis<br>
-          <b>B.</b> Escolher a que parece mais ágil
+          <b>A.</b> <span data-i18n="jornada-tarefas-1a">Buscar plataformas confiáveis</span><br>
+          <b>B.</b> <span data-i18n="jornada-tarefas-1b">Escolher a que parece mais ágil</span>
         </div>
         <div class="persona-col">
-          <b>A.</b> Preencher perguntas sobre o projeto<br>
-          <b>B.</b> Anexar referências e detalhes
+          <b>A.</b> <span data-i18n="jornada-tarefas-2a">Preencher perguntas sobre o projeto</span><br>
+          <b>B.</b> <span data-i18n="jornada-tarefas-2b">Anexar referências e detalhes</span>
         </div>
         <div class="persona-col">
-          <b>A.</b> Conferir valor estimado<br>
-          <b>B.</b> Avaliar prazo sugerido
+          <b>A.</b> <span data-i18n="jornada-tarefas-3a">Conferir valor estimado</span><br>
+          <b>B.</b> <span data-i18n="jornada-tarefas-3b">Avaliar prazo sugerido</span>
         </div>
         <div class="persona-col">
-          <b>A.</b> Enviar o pedido<br>
-          <b>B.</b> Receber confirmação visual
+          <b>A.</b> <span data-i18n="jornada-tarefas-4a">Enviar o pedido</span><br>
+          <b>B.</b> <span data-i18n="jornada-tarefas-4b">Receber confirmação visual</span>
         </div>
         <div class="persona-col">
-          <b>A.</b> Esperar retorno do editor<br>
-          <b>B.</b> Negociar detalhes finais
+          <b>A.</b> <span data-i18n="jornada-tarefas-5a">Esperar retorno do editor</span><br>
+          <b>B.</b> <span data-i18n="jornada-tarefas-5b">Negociar detalhes finais</span>
         </div>
       </div>
       <div class="persona-row">
         <div class="persona-col persona-label" data-i18n="jornada-sentimento">Sentimento</div>
         <div class="persona-col">
-          <b>A.</b> Esperançosa por praticidade<br>
-          <b>B.</b> Ansiosa por rapidez
+          <b>A.</b> <span data-i18n="jornada-sentimento-1a">Esperançosa por praticidade</span><br>
+          <b>B.</b> <span data-i18n="jornada-sentimento-1b">Ansiosa por rapidez</span>
         </div>
         <div class="persona-col">
-          <b>A.</b> Focada no preenchimento<br>
-          <b>B.</b> Às vezes confusa com perguntas técnicas
+          <b>A.</b> <span data-i18n="jornada-sentimento-2a">Focada no preenchimento</span><br>
+          <b>B.</b> <span data-i18n="jornada-sentimento-2b">Às vezes confusa com perguntas técnicas</span>
         </div>
         <div class="persona-col">
-          <b>A.</b> Aliviada ao ver o orçamento<br>
-          <b>B.</b> Às vezes insegura sobre detalhes
+          <b>A.</b> <span data-i18n="jornada-sentimento-3a">Aliviada ao ver o orçamento</span><br>
+          <b>B.</b> <span data-i18n="jornada-sentimento-3b">Às vezes insegura sobre detalhes</span>
         </div>
         <div class="persona-col">
-          <b>A.</b> Confiante se houver confirmação visual clara<br>
-          <b>B.</b> Insegura sem feedback
+          <b>A.</b> <span data-i18n="jornada-sentimento-4a">Confiante se houver confirmação visual clara</span><br>
+          <b>B.</b> <span data-i18n="jornada-sentimento-4b">Insegura sem feedback</span>
         </div>
         <div class="persona-col">
-          <b>A.</b> Ansiosa por resposta<br>
-          <b>B.</b> Deseja agilidade e clareza
+          <b>A.</b> <span data-i18n="jornada-sentimento-5a">Ansiosa por resposta</span><br>
+          <b>B.</b> <span data-i18n="jornada-sentimento-5b">Deseja agilidade e clareza</span>
         </div>
       </div>
       <div class="persona-row">
         <div class="persona-col persona-label" data-i18n="jornada-oportunidades">Oportunidades de melhoria</div>
         <div class="persona-col">
-          <b>A.</b> Homepage objetiva e confiável<br>
-          <b>B.</b> Explicar benefícios de orçar online
+          <b>A.</b> <span data-i18n="jornada-oportunidades-1a">Homepage objetiva e confiável</span><br>
+          <b>B.</b> <span data-i18n="jornada-oportunidades-1b">Explicar benefícios de orçar online</span>
         </div>
         <div class="persona-col">
-          <b>A.</b> Perguntas guiadas<br>
-          <b>B.</b> Exemplos visuais e dicas para facilitar o briefing
+          <b>A.</b> <span data-i18n="jornada-oportunidades-2a">Perguntas guiadas</span><br>
+          <b>B.</b> <span data-i18n="jornada-oportunidades-2b">Exemplos visuais e dicas para facilitar o briefing</span>
         </div>
         <div class="persona-col">
-          <b>A.</b> Mostrar resumo do pedido<br>
-          <b>B.</b> Permitir editar antes de enviar
+          <b>A.</b> <span data-i18n="jornada-oportunidades-3a">Mostrar resumo do pedido</span><br>
+          <b>B.</b> <span data-i18n="jornada-oportunidades-3b">Permitir editar antes de enviar</span>
         </div>
         <div class="persona-col">
-          <b>A.</b> Confirmação visual clara<br>
-          <b>B.</b> Feedback rápido em caso de erro
+          <b>A.</b> <span data-i18n="jornada-oportunidades-4a">Confirmação visual clara</span><br>
+          <b>B.</b> <span data-i18n="jornada-oportunidades-4b">Feedback rápido em caso de erro</span>
         </div>
         <div class="persona-col">
-          <b>A.</b> Notificações em tempo real<br>
-          <b>B.</b> Canal fácil de comunicação
+          <b>A.</b> <span data-i18n="jornada-oportunidades-5a">Notificações em tempo real</span><br>
+          <b>B.</b> <span data-i18n="jornada-oportunidades-5b">Canal fácil de comunicação</span>
         </div>
       </div>
     </div>
