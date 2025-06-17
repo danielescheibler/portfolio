@@ -17,6 +17,30 @@ const partials = [
   { id: 'footer', file: 'partials/footer.html' }
 ];
 
+// Salva o idioma escolhido no localStorage e mantém selecionado após reload
+let lang = localStorage.getItem('lang') || 'pt';
+
+// Função para carregar idioma via JSON e aplicar traduções
+function carregarIdioma(lang) {
+  fetch(`langs/${lang}.json`)
+    .then(res => res.json())
+    .then(traducao => {
+      // Textos
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (traducao[key]) el.innerHTML = traducao[key];
+      });
+      // Imagens
+      document.querySelectorAll("[data-i18n-img]").forEach(el => {
+        const key = el.getAttribute("data-i18n-img");
+        if (traducao[key]) el.src = traducao[key];
+      });
+      document.documentElement.setAttribute("lang", lang);
+      localStorage.setItem('lang', lang);
+    });
+}
+
+// Carrega partials e só então inicia lógicas
 Promise.all(partials.map(part =>
   fetch(part.file).then(r => r.text()).then(content => {
     document.getElementById(part.id).innerHTML = content;
@@ -47,7 +71,6 @@ Promise.all(partials.map(part =>
 
   // 3.1. TROCA O GRÁFICO DO PROCESSO CONFORME TEMA
   function atualizarGraficoProcesso() {
-    // Pode ter mais de um gráfico em algumas páginas, trate todos!
     const graficos = document.querySelectorAll('#grafico-processo');
     graficos.forEach(img => {
       if (!img) return;
@@ -57,9 +80,7 @@ Promise.all(partials.map(part =>
         : "assets/processodoprojeto.png";
     });
   }
-  // Chama a função ao carregar partials (garante troca ao entrar na página)
   atualizarGraficoProcesso();
-  // Observa mudanças no atributo data-theme no <html>
   const observerGrafico = new MutationObserver(atualizarGraficoProcesso);
   observerGrafico.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
@@ -92,7 +113,7 @@ Promise.all(partials.map(part =>
       }
       atualizarFundoHero();
       atualizarIconeTema();
-      atualizarGraficoProcesso(); // Atualiza o gráfico manualmente ao clicar no botão!
+      atualizarGraficoProcesso();
     });
   }
 
@@ -107,9 +128,11 @@ Promise.all(partials.map(part =>
       setTimeout(() => backToTopBtn.style.display = 'none', 350);
     }
   });
-  backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   // 6. MENU MOBILE (hamburguer)
   const menuToggleBtn = document.getElementById('menu-toggle');
@@ -148,7 +171,6 @@ Promise.all(partials.map(part =>
         this.classList.add('active');
         const section = document.querySelector(href);
         if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        // Mostra projetos, esconde detalhes se for início
         if (href === "#projects-list") {
           document.getElementById('projects-list').style.display = 'block';
           document.getElementById('project-orcamento').style.display = 'none';
@@ -157,7 +179,6 @@ Promise.all(partials.map(part =>
       }
     });
   });
-  // Atualiza botão ativo conforme scroll
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = Array.from(navLinks).map(link => document.querySelector(link.getAttribute('href')));
   window.addEventListener('scroll', () => {
@@ -190,7 +211,9 @@ Promise.all(partials.map(part =>
           if (card.dataset.project === "orcamento" && projectOrcamento) projectOrcamento.scrollIntoView({ behavior: 'smooth', block: 'start' });
           if (card.dataset.project === "ecommerce" && projectEcommerce) projectEcommerce.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 80);
-        atualizarGraficoProcesso(); // Garante troca do gráfico ao abrir detalhes
+        atualizarGraficoProcesso();
+        // Reaplica tradução ao trocar de "página" interna
+        carregarIdioma(localStorage.getItem('lang') || 'pt');
       });
     });
 
@@ -201,6 +224,7 @@ Promise.all(partials.map(part =>
         projectOrcamento.style.display = 'none';
         projectsList.style.display = 'block';
         projectsList.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        carregarIdioma(localStorage.getItem('lang') || 'pt');
       });
     }
     // Botão voltar do e-commerce
@@ -210,65 +234,41 @@ Promise.all(partials.map(part =>
         projectEcommerce.style.display = 'none';
         projectsList.style.display = 'block';
         projectsList.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        carregarIdioma(localStorage.getItem('lang') || 'pt');
       });
     }
   }
   setupProjectNavigation();
 
-  // 9. IDIOMA (PT/EN) - só texto marcado com data-i18n
-  const langBtns = document.querySelectorAll('.lang-btn');
-  let lang = 'pt';
-  const i18n = {
-    pt: {
-      home: "Página Inicial",
-      about: "Sobre Mim",
-      contact: "Contato",
-      "about-title": "Sobre Mim",
-      "about-role": "UX/UI Designer e Criadora Visual",
-      "about-text": `Me chamo <b>Daniele Scheibler</b>, sou UX/UI Designer com formação em Ciências Biológicas e background em design gráfico, edição de vídeos e motion design.<br>
-        Natural do Rio Grande do Sul, iniciei minha trajetória acadêmica pela ciência, mas encontrei nas artes visuais minha verdadeira paixão.<br>
-        Hoje atuo como profissional autônoma criando identidades visuais, conteúdos digitais e experiências centradas no usuário.<br>`,
-      "about-tools": "Ferramentas e Tecnologias",
-      "orcamento-title": "Orçamento de Serviços Express",
-      "orcamento-desc": "UX/UI para otimizar orçamentos de vídeo e facilitar a vida do profissional audiovisual.",
-      "ecommerce-title": "E-commerce (Projeto Fictício)",
-      "ecommerce-desc": "Experiência de compra digital, design de interface e jornada do usuário para loja online.",
-      footer: "Desenvolvido por <b>Daniele Scheibler</b> • 2025"
-    },
-    en: {
-      home: "Home",
-      about: "About Me",
-      contact: "Contact",
-      "about-title": "About Me",
-      "about-role": "UX/UI Designer & Visual Creator",
-      "about-text": `My name is <b>Daniele Scheibler</b>, I'm a UX/UI Designer with a background in Biological Sciences, graphic design, video editing and motion design.<br>
-        Born in Rio Grande do Sul, I started my academic path in science, but found my true passion in the visual arts.<br>
-        Today I work as a freelance professional creating visual identities, digital content, and user-centered experiences.<br>`,
-      "about-tools": "Tools & Technologies",
-      "orcamento-title": "Services Budget Express",
-      "orcamento-desc": "UX/UI to optimize video budgets and make life easier for audiovisual professionals.",
-      "ecommerce-title": "E-commerce (Fictional Project)",
-      "ecommerce-desc": "Digital shopping experience, interface design and user journey for an online store.",
-      footer: "Developed by <b>Daniele Scheibler</b> • 2025"
-    }
-  };
-  function traduzirSite(lang) {
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      if (i18n[lang][key]) {
-        el.innerHTML = i18n[lang][key];
-      }
+  // 9. IDIOMA (PT/EN) - textos e imagens marcados com data-i18n/data-i18n-img
+  // ATENÇÃO: langBtns pode não existir até partial ser carregado!
+  function bindLangBtns() {
+    const langBtns = document.querySelectorAll('.lang-btn');
+    langBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        lang = this.dataset.lang;
+        carregarIdioma(lang);
+        langBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
     });
-    document.documentElement.setAttribute("lang", lang);
+    // Marca botão ativo
+    langBtns.forEach(b => b.classList.remove('active'));
+    const btn = Array.from(langBtns).find(b => b.dataset.lang === lang);
+    if (btn) btn.classList.add('active');
   }
-  langBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      langBtns.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      lang = this.dataset.lang;
-      traduzirSite(lang);
-    });
-  });
-  traduzirSite(lang);
+  // Bind após partials carregados
+  bindLangBtns();
+
+  // Aplica idioma salvo/localStorage após carregar tudo
+  carregarIdioma(lang);
+
+  // Se partials forem recarregados dinamicamente em outros fluxos, reaplicar idioma (SPA)
+  // Opcional: MutationObserver para garantir tradução mesmo se blocos mudarem dinamicamente
+  // Se não usar SPA, pode remover este bloco
+  // const observerPartial = new MutationObserver(() => {
+  //   carregarIdioma(localStorage.getItem('lang') || 'pt');
+  // });
+  // observerPartial.observe(document.body, { childList: true, subtree: true });
 
 });
