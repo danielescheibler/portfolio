@@ -20,7 +20,6 @@ const partials = [
 // Salva o idioma escolhido no localStorage e mantém selecionado após reload
 let lang = localStorage.getItem('lang') || 'pt';
 
-// Função para carregar idioma via JSON e aplicar traduções
 function carregarIdioma(lang) {
   fetch(`langs/${lang}.json`)
     .then(res => res.json())
@@ -35,9 +34,26 @@ function carregarIdioma(lang) {
         const key = el.getAttribute("data-i18n-img");
         if (traducao[key]) el.src = traducao[key];
       });
+
+      // Troca gráfico mobile do processo ao trocar idioma
+      trocarGraficoProcessoMobile(lang);
+
       document.documentElement.setAttribute("lang", lang);
       localStorage.setItem('lang', lang);
     });
+}
+function trocarGraficoProcessoMobile(lang) {
+  const mobileSrc = document.getElementById('grafico-processo-mobile');
+  if (mobileSrc) {
+    if (lang === 'en') {
+      mobileSrc.srcset = 'assets/processodoprojeto_mobileen.png'; // nome do arquivo em inglês!
+    } else {
+      mobileSrc.srcset = 'assets/processodoprojeto_mobile.png';
+    }
+    // Força o browser a reavaliar o <picture>
+    const img = document.getElementById('grafico-processo');
+    if (img) img.src = img.src;
+  }
 }
 
 // Carrega partials e só então inicia lógicas
