@@ -72,6 +72,11 @@
   "persona-cidade": "Porto Alegre/RS",
   "persona-familia": "Mora sozinha",
   "persona-profissao": "Editora autônoma",
+  "persona-idade-label":"Idade:",
+  "persona-formacao-label": "Formação:",
+  "persona-cidade-label": "Cidade:",
+  "persona-familia-label": "Família:",
+  "persona-profissao-label": "Profissão:",
   "persona-summary": "Alice é editora freelancer de 28 anos, atende pequenas empresas e influencers no Brasil e mora sozinha. Valoriza orçamentos rápidos e claros para focar na parte criativa e equilibrar vida pessoal e profissional. Frustra-se com briefings incompletos, negociação pouco transparente e excesso de mensagens.",
   "persona-objetivos-title": "Objetivos",
   "persona-objetivo-1": "Orçar projetos de vídeo e motion de forma ágil, sem burocracia.",
@@ -158,7 +163,8 @@
   "conclusao-aprendi-desc": "Importância da clareza nas perguntas e feedback visual constante",
 
   "proximos-passos-title": "Próximos passos",
-
+   "passos-img": "assets/passos.png",
+ 
   "ecommerce-title": "E-commerce (Projeto Fictício)",
   "ecommerce-desc": "Experiência de compra digital, design de interface e jornada do usuário para loja online.",
 

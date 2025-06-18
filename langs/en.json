@@ -72,6 +72,11 @@
   "persona-cidade": "Porto Alegre/RS",
   "persona-familia": "Lives alone",
   "persona-profissao": "Freelance Editor",
+  "persona-idade-label":"Age:",
+  "persona-formacao-label": "Education:",
+  "persona-cidade-label": "Location:",
+  "persona-familia-label": "Family:",
+  "persona-profissao-label": "Career:",
   "persona-summary": "Alice is a 28-year-old freelance editor, serving small businesses and influencers in Brazil and living alone. She values fast and clear quotes to focus on the creative part and balance her personal and professional life. She is frustrated by incomplete briefings, non-transparent negotiation, and an excess of messages.",
   "persona-objetivos-title": "Goals",
   "persona-objetivo-1": "Get video and motion project quotes quickly, without bureaucracy.",
@@ -158,7 +163,8 @@
   "conclusao-aprendi-desc": "Importance of clarity in questions and constant visual feedback",
 
   "proximos-passos-title": "Next steps",
-
+  "passos-img": "assets/passosen.png",
+ 
   "ecommerce-title": "E-commerce (Fictional Project)",
   "ecommerce-desc": "Digital shopping experience, interface design and user journey for an online store.",
 

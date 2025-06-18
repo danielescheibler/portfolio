@@ -38,20 +38,38 @@ function carregarIdioma(lang) {
       // Troca gráfico mobile do processo ao trocar idioma
       trocarGraficoProcessoMobile(lang);
 
+      // Troca imagem mobile dos próximos passos ao trocar idioma
+      trocarProximosPassosMobile(lang);
+
       document.documentElement.setAttribute("lang", lang);
       localStorage.setItem('lang', lang);
     });
 }
+
 function trocarGraficoProcessoMobile(lang) {
   const mobileSrc = document.getElementById('grafico-processo-mobile');
   if (mobileSrc) {
     if (lang === 'en') {
-      mobileSrc.srcset = 'assets/processodoprojeto_mobileen.png'; // nome do arquivo em inglês!
+      mobileSrc.srcset = 'assets/processodoprojeto_mobileen.png';
     } else {
       mobileSrc.srcset = 'assets/processodoprojeto_mobile.png';
     }
     // Força o browser a reavaliar o <picture>
     const img = document.getElementById('grafico-processo');
+    if (img) img.src = img.src;
+  }
+}
+
+function trocarProximosPassosMobile(lang) {
+  const mobileSrc = document.getElementById('proximos-passos-mobile');
+  if (mobileSrc) {
+    if (lang === 'en') {
+      mobileSrc.srcset = 'assets/passosmobile_en.png';
+    } else {
+      mobileSrc.srcset = 'assets/passosmobile.png';
+    }
+    // Força o browser a reavaliar o <picture>
+    const img = document.getElementById('proximos-passos');
     if (img) img.src = img.src;
   }
 }
