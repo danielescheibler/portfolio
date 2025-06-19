@@ -650,3 +650,13 @@ strong, b, a {
   max-width: 100%;
   height: auto;
 }
+.wireframes-papel {
+  display: flex;
+  gap: 8px; /* espaço entre as imagens, ajuste se quiser */
+  align-items: center; 
+ }
+#wireframes-papel img {
+  height: 300px;
+   padding-left: 30px;
+  object-fit: contain; /* ou "contain" para não cortar */
+}
