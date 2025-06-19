@@ -134,9 +134,11 @@
   "mapa-title": "Sitemap",
   "mapa-img": "assets/mapa_en.png",
   "wireframes-papel": "Paper Wireframes",
-  "wireframes-id": "I sketched paper wireframes focused on user pain points and navigation. I also explored layout variations for different screen sizes to ensure responsiveness — with the desktop version on the left and the mobile version on the right.",
+  "wireframes-id": "I sketched paper wireframes focused on user pain points and navigation. I also explored layout variations for different screen sizes to ensure responsiveness — with the <strong>desktop version (a)</strong> and the <strong>mobile version (b)</strong>.",
   "wireframes-figma": "Wireframes in Figma",
+  "wireframes-figma-id": "After creating the wireframes on paper, I turned them into digital prototypes in Figma. In the digital environment, it became easier to adjust the position of buttons and visual elements, always aiming to improve the user experience and address pain points identified in the navigation.",
   "prototipo-baixa": "Low-fidelity Prototype",
+  "prototipo-baixa-fidelidade": "For the low-fidelity prototype, I connected the screens of the main flow—from form completion to receiving the quote—and implemented improvements based on feedback about layout and usability, focusing on the main user pain points.",
   "prototipo-alta": "High-fidelity Prototype",
   "prototipo-alta-desc": "My high-fidelity prototype followed the same flow as the low-fidelity prototype and incorporated the design changes made after usability testing, as well as several improvements I identified along the way. View the high-fidelity prototype of the <a href=\"https://danielescheibler.github.io/orcamento-video/\" target=\"_blank\">Express Editing Budget.</a>",
 

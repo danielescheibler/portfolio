@@ -134,9 +134,11 @@
   "mapa-title": "Mapa do Site",
   "mapa-img": "assets/mapa.png",
   "wireframes-papel": "Wireframes no papel",
-  "wireframes-id": "Desenhei wireframes em papel com foco nos pontos de dor dos usuários e na navegação. Explorei variações para diferentes tamanhos de tela, garantindo responsividade — com a versão desktop à esquerda e a mobile à direita.",
+  "wireframes-figma-id": "Após criar os wireframes em papel, transformei-os em protótipos digitais no Figma. No ambiente digital, ficou mais fácil ajustar a posição dos botões e elementos visuais, buscando sempre melhorar a experiência do usuário e resolver pontos de dor identificados na navegação.",
+  "wireframes-id": "Desenhei wireframes em papel com foco nos pontos de dor dos usuários e na navegação. Explorei variações para diferentes tamanhos de tela, garantindo responsividade — com a <strong>versão desktop (a)</strong> e a <strong>mobile (b)</strong>.",
   "wireframes-figma": "Wireframes no Figma",
   "prototipo-baixa": "Protótipo de baixa-fidelidade",
+  "prototipo-baixa-fidelidade":  "Para o protótipo de baixa fidelidade, conectei as telas do fluxo principal — do preenchimento ao recebimento do orçamento — e implementei melhorias com base em feedbacks sobre layout e usabilidade, focando nos principais pontos de dor dos usuários.",
   "prototipo-alta": "Protótipo de alta-fidelidade",
   "prototipo-alta-desc": "Meu protótipo de alta fidelidade seguiu o mesmo fluxo do protótipo de baixa fidelidade e incorporou as mudanças de design feitas após o estudo de usabilidade, além de várias melhorias que identifiquei ao longo do processo. Visualizar o protótipo de alta fidelidade do <a href=\"https://danielescheibler.github.io/orcamento-video/\" target=\"_blank\">Orçamento de Edição Express.</a>",
 

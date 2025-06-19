@@ -9,7 +9,7 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-  }
+    }
 }
 
 /* Até 1200px */
@@ -129,7 +129,7 @@
   }
   .header-nav.active { display: flex; }
   .header-social { display: none !important; }
-  .header-lang { display: flex !important; position: absolute; top: 14px; right: 64px; left: auto; z-index: 21; background: transparent; white-space: nowrap; overflow: visible; font-size: 1.04rem; padding: 0 4px; }
+  .header-lang { display: flex !important; position: absolute; top: 200px; right: 0px; left: 260px; z-index: 11; background: transparent; white-space: nowrap; overflow: visible; font-size: 0.5rem; padding: 0; }
   .hero-title-block h1 { font-size: 2rem; }
   .hero-content { flex-direction: column; gap: 1.6rem; margin-top: 2rem; margin-bottom: 2rem; }
   .hero-image-block { max-width: 95vw; width: 100%; display: flex; justify-content: center; align-items: center; }
@@ -308,7 +308,6 @@
     padding-left: 0.8rem;
     padding-right: 0.8rem;
     padding-top: 1.2rem;
-  
     max-width: 99vw;
     text-align: center;
     margin-left: auto;
@@ -345,7 +344,6 @@
     padding-left: 0.6rem;
     padding-right: 0.6rem;
     padding-top: 1.2rem;
-
     max-width: 99vw;
     text-align: center;
     margin-left: auto;
@@ -527,5 +525,38 @@
   .perfil-tecnologias img {
     width: 17px !important;
     height: 17px !important;
+  }}
+
+@media (max-width: 700px) {
+  .wireframes-papel {
+    gap: 8px;
   }
+  .wireframe-desktop,
+  .wireframe-mobile {
+    width: 45vw;
+    height: auto;
+    max-height: 180px;
+  }
+}
+
+@media (max-width: 500px) {
+  .wireframes-papel {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 -60px 0;}
+   
+  }
+  .wireframe-desktop,
+  .wireframe-mobile {
+    width: 90vw;
+    max-width: 350px;
+    height: auto;
+    max-height: 200px;
+  }
+  #processo .persona-photo {
+  width: 300px !important;
+  height: 200px !important;
+  object-fit: cover;
+  border-radius: 10px !important;
 }

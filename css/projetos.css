@@ -446,12 +446,12 @@ strong, b, a {
 }
 
 /* AJUSTE PARA FOTO DA PERSONA - SÓ VALE PARA FOTO DA PERSONA! */
-#personas .persona-photo {
-  width: 190px !important;
-  height: 190px !important;
+#processo .persona-photo {
+  width: 170px !important;
+  height: 275px !important;
   object-fit: cover;
   border-radius: 10px !important;
-  margin: 0 !important;
+  margin: 0px !important;
   display: block;
 }
 
@@ -572,6 +572,7 @@ strong, b, a {
   .container { max-width: 98vw; }
   .hero-avatar { max-width: 30vw; }
   #processo { max-width: 98vw; }
+
 }
 @media (max-width: 900px) {
   .site-hero-top { padding-left: 8px; }
@@ -597,6 +598,7 @@ strong, b, a {
   #mockup img, #grafico-mockup { max-width: 90vw; }
   #processo img { max-width: 96vw; }
   #processo { max-width: 96vw; }
+ 
 }
 .container h2, section.container > h2 {
   text-align: center;
@@ -652,11 +654,19 @@ strong, b, a {
 }
 .wireframes-papel {
   display: flex;
-  gap: 8px; /* espaço entre as imagens, ajuste se quiser */
-  align-items: center; 
- }
-#wireframes-papel img {
-  height: 300px;
-   padding-left: 30px;
-  object-fit: contain; /* ou "contain" para não cortar */
+  gap: 0px; /* espaço entre as imagens; ajuste como quiser */
+  justify-content: center; /* centraliza no container */
+  align-items: flex-end;   /* alinha as bases das imagens */
+  margin-bottom: 2rem;
+}
+#processo .wireframe-desktop {
+  width: 300px;
+  height: 300px !important;
+  max-width: unset !important;
+}
+
+#processo .wireframe-mobile {
+  width: 300px;
+  height: 300px !important;
+  max-width: unset !important;
 }
