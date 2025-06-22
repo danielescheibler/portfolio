@@ -545,7 +545,23 @@
     align-items: center;
     gap: 8px;
     margin: 0 0 -60px 0;}
-   
+   .wireframes-figma {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+ #processo .wireframe-figma-desktop {
+  width: 290px !important;
+  }  
+  #processo .wireframe-figma-mobile {
+  width: 120px !important;
+ }  
+
+ #processo .prototipo-baixa-fidelidade img {
+  width: 300px !important;
+ }
+
   }
   .wireframe-desktop,
   .wireframe-mobile {
@@ -559,4 +575,6 @@
   height: 200px !important;
   object-fit: cover;
   border-radius: 10px !important;
-}
+  }
+
+

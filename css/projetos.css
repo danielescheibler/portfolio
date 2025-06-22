@@ -75,10 +75,10 @@ strong, b, a {
 }
 
 .project-desc {
-  font-size: 1.07rem;
+  font-size: 0.9rem;
   color: #0d1215;
   opacity: 0.87;
-  text-align: left;
+  text-align: center;
   margin: 0 0 16px 0;
   max-width: 100%;
 }
@@ -695,5 +695,26 @@ background-color: #40849e;
   max-width: unset !important;
   border: 1px solid #0d1215;
 }
+.prototipo-baixa-fidelidade {
+  justify-content: center; 
+}
+#processo .prototipo-figma-baixa {
+  width: 700px;
+  max-width: unset !important;
+  border: 1px solid #0d1215;
+}
 
+.disclaimer-section {
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+}
 
+.disclaimer-section small {
+  display: block;
+  font-size: 0.70rem;
+  color: #6a6a6a;
+  opacity: 0.88;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+}

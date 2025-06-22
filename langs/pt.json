@@ -15,8 +15,8 @@
 
   "footer-copy": "Desenvolvido por <b>Daniele Scheibler</b> • 2025",
 
-  "orcamento-title": "Orçamento de Serviços Express",
-  "orcamento-desc": "UX/UI para otimizar orçamentos de vídeo e facilitar a vida do profissional audiovisual.",
+  "orcamento-title": "Orçamentos CutPro",
+  "orcamento-desc": "Plataforma de orçamentos para edição de vídeo e motion design. Após preencher um formulário, o usuário recebe uma estimativa por e-mail.",
   "orcamento-btn": "Voltar para o início",
   "orcamento-visao": "Visão Geral do Projeto",
   "orcamento-produto-title": "O Produto",
@@ -69,7 +69,7 @@
   "persona-nome": "Alice",
   "persona-idade": "28 anos",
   "persona-formacao": "Designer Gráfico",
-  "persona-cidade": "Porto Alegre/RS",
+  "persona-cidade": "Porto Alegre, RS - Brasil",
   "persona-familia": "Mora sozinha",
   "persona-profissao": "Editora autônoma",
   "persona-idade-label":"Idade:",
@@ -174,5 +174,6 @@
   "back-to-projects-orcamento": "Voltar para o início",
   "back-to-projects-ecommerce": "Voltar para o início",
 
-  "logo-img": "assets/logo-pt.png"
+  "logo-img": "assets/logo-pt.png",
+  "disclaimer": "*Este projeto é fictício. O site e suas funcionalidades foram desenvolvidos para fins de portfólio e aprendizado. <br>A jornada do usuário, pesquisas e dados apresentados não representam processos ou pesquisas reais."
 }

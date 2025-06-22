@@ -15,8 +15,8 @@
 
   "footer-copy": "Developed by <b>Daniele Scheibler</b> • 2025",
 
-  "orcamento-title": "Services Budget Express",
-  "orcamento-desc": "UX/UI to optimize video budgets and make life easier for audiovisual professionals.",
+  "orcamento-title": "CutPro Quote",
+  "orcamento-desc": "A quote platform for video editing and motion design. Simply fill out a form and receive an estimated price by email.",
   "orcamento-btn": "Back to start",
   "orcamento-visao": "Project Overview",
   "orcamento-produto-title": "The Product",
@@ -69,7 +69,7 @@
   "persona-nome": "Alice",
   "persona-idade": "28 years old",
   "persona-formacao": "Graphic Designer",
-  "persona-cidade": "Porto Alegre/RS",
+  "persona-cidade": "Porto Alegre, RS - Brazil",
   "persona-familia": "Lives alone",
   "persona-profissao": "Freelance Editor",
   "persona-idade-label":"Age:",
@@ -174,5 +174,6 @@
   "back-to-projects-orcamento": "Back to start",
   "back-to-projects-ecommerce": "Back to start",
 
-  "logo-img": "assets/logo-en.png"
+  "logo-img": "assets/logo-en.png",
+  "disclaimer": "*This project is fictional. The website and its functionalities were developed for portfolio and learning purposes. <br> The user journey, research, and data presented do not represent real processes or actual research."
 }
