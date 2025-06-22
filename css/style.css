@@ -1,11 +1,11 @@
 :root {
   --header-bg: #EFEFEF;
-  --accent: #323232;
+  --accent: #0d1215;
   --accent2: #468099;
   --white: #fff;
-  --gray: #5a5a5a;
+  --gray: #0d1215;
   --gray-bg: #EFEFEF;
-  --social: #323232;
+  --social: #0d1215;
   --social-hover: #468099;
   --transition: .23s cubic-bezier(.5,.05,.22,1);
 }
@@ -235,9 +235,12 @@ body {
   align-items: center;
   justify-content: center;
 }
+.theme-float img {
+  filter: invert(1) brightness(2);
+}
 .theme-float:hover {
   background: var(--accent);
-  color: var(--white);
+  color: #fff;
   opacity: 1;
   transform: scale(1.12);
 }
@@ -416,7 +419,7 @@ li {
 }
 #back-to-top:hover {
   background: var(--accent);
-  color: #fff;
+  color: #40849e;
   opacity: 1;
   transform: scale(1.13);
 }
@@ -456,7 +459,7 @@ li {
   margin-top: 0;
   margin-bottom: 0.7rem;
   font-size: 1.5rem;
-  color: #323232;
+  color: #0d1215;
 }
 .sobre-mim-texto p {
   margin: 0;
@@ -587,7 +590,7 @@ li {
 }
 .footer-copy {
   text-align: center !important;
-  color: #888;
+  color: #0d1215;
   font-size: 0.98rem;
   padding: 0.7rem 0 1.2rem 0;
 }

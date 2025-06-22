@@ -223,7 +223,7 @@
   }
   .persona-quote {
     font-style: italic;
-    color: #444;
+    color: #0d1215;
     margin: 0.6rem 0 0 0;
     font-size: 1.02rem;
     text-align: center;
@@ -275,7 +275,7 @@
     border: 1.5px solid #40849e;
     border-radius: 7px;
     padding: 0.65rem 0.9rem;
-    color: #263031;
+    color: #0d1215;
     font-size: 0.98rem;
     margin-top: 0.8rem;
     background: #fafdff;

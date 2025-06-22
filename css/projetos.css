@@ -76,7 +76,7 @@ strong, b, a {
 
 .project-desc {
   font-size: 1.07rem;
-  color: #5a5a5a;
+  color: #0d1215;
   opacity: 0.87;
   text-align: left;
   margin: 0 0 16px 0;
@@ -301,13 +301,13 @@ strong, b, a {
 }
 .achado-item h3 {
   font-size: 1.18rem;
-  color: #646b6d;
+  color: #0d1215;
   margin: 0 0 10px 0;
   font-weight: 600;
 }
 .achado-item p {
   font-size: 1rem;
-  color: #646b6d;
+  color: #0d1215;
   margin: 0;
   font-weight: 400;
 }
@@ -354,7 +354,7 @@ strong, b, a {
 }
 .usabilidade-item p {
   font-size: 1rem;
-  color: #646b6d;
+  color: #0d1215;
   margin: 0;
   font-weight: 400;
 }
@@ -388,8 +388,8 @@ strong, b, a {
   font-size: 1.0rem;
 }
 .persona-goal {
-  font-size: 0.96rem;
-  color: #444;
+  font-size: 0.90rem;
+  color:#0d1215;
   margin: 0.3rem 0 0 0;
   opacity: 0.9;
 }
@@ -399,14 +399,18 @@ strong, b, a {
 }
 .persona-row {
   display: grid;
-  grid-template-columns: 150px repeat(5, 1fr);
-  min-width: 930px; /* antes era 640px, aumente para garantir espaço */
+  grid-template-columns: 125px repeat(5, 1fr);
+  min-width: 730px; /* antes era 640px, aumente para garantir espaço */
 }
 .persona-header {
-  font-weight: 700;
-  color: #24455a;
+background-color: #40849e;
+}
+
+.persona-header {
+  font-weight: 600;
+  color: #ffffff;
   border-radius: 10px 10px 0 0;
-  font-size: 0.95rem;
+  font-size: 0.90rem;
 }
 .persona-row:not(.persona-header) {
  border-bottom: 1px solid #e0e0e0;
@@ -484,7 +488,7 @@ strong, b, a {
   padding: 0.8rem 1.2rem;
   border-left: 3px solid #40849e;
   border-radius: 7px;
-  color: #232323;
+  color: #0d1215;
   background: #f7fbfc;
   font-size: 1rem;
   text-align: justify;
@@ -508,7 +512,7 @@ strong, b, a {
 }
 .persona-objetivos-frustracoes p {
   margin: 0.3rem 0;
-  color: #444;
+  color: #0d1215;
   font-size: 1rem;
 }
 

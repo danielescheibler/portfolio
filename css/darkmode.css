@@ -53,4 +53,7 @@
   background: #222; /* ou sua cor de fundo */
 
 }
-
+/* Footer */
+[data-theme="dark"] .footer-copy {
+  color: #ffffff;
+}
