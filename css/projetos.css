@@ -667,10 +667,33 @@ background-color: #40849e;
   width: 300px;
   height: 300px !important;
   max-width: unset !important;
+  border: 1px solid #0d1215;
 }
 
 #processo .wireframe-mobile {
   width: 300px;
   height: 300px !important;
   max-width: unset !important;
+  border: 1px solid #0d1215;
 }
+.wireframes-figma {
+  display: flex;
+  gap: 0px; 
+  justify-content: center; 
+  align-items: flex-end;   
+}
+#processo .wireframe-figma-desktop {
+  width: 350px;
+  height: 250px !important;
+  max-width: unset !important;
+  border: 1px solid #0d1215;
+}
+
+#processo .wireframe-figma-mobile {
+  width: 120px;
+  height: 250px !important;
+  max-width: unset !important;
+  border: 1px solid #0d1215;
+}
+
+
