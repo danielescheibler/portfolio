@@ -9,7 +9,7 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    }
+  }
 }
 
 /* Até 1200px */
@@ -67,10 +67,10 @@
     margin-left: auto;
     margin-right: auto;
   }
-   #processo #proximos-passos {
+  #processo #proximos-passos {
     display: block;
     width: 100%;
-    max-width: 180px; /* ou outro valor que preferir */
+    max-width: 180px;
     height: auto;
     margin: 0 auto;
   }
@@ -88,7 +88,6 @@
     gap: 1.2rem;
     justify-content: center;
   }
-  /* Justificar texto nos blocos principais do persona mobile */
   .persona-mobile .persona-summary,
   .persona-mobile .persona-objetivos-frustracoes p,
   .persona-mobile .persona-basic,
@@ -179,14 +178,12 @@
     height: 22px !important;
   }
 
-  /* PERSONA MOBILE AJUSTES */
   .persona-mobile {
     max-width: 90vw;
     display: flex;
     flex-direction: column;
     font-size: 1.02rem;
     align-items: center;
-    
   }
   .persona-photo {
     display: flex;
@@ -202,24 +199,20 @@
   .persona-basic {
     width: 50%;
     text-align: left;
-    
   }
   .persona-basic h2 {
     font-size: 1.4rem;
     text-align: left;
     font-weight: 700;
     color: #40849e;
-    
   }
   .persona-basic ul {
     list-style: none;
     padding: 0;
     font-size: 0.99rem;
-    
   }
   .persona-basic li {
-   text-align: left;
-   
+    text-align: left;
   }
   .persona-quote {
     font-style: italic;
@@ -227,7 +220,6 @@
     margin: 0.6rem 0 0 0;
     font-size: 1.02rem;
     text-align: center;
-    
   }
   .persona-details {
     display: flex;
@@ -237,7 +229,6 @@
     margin-bottom: 0.9rem;
     flex-wrap: wrap;
     text-align: center;
-    
   }
   .persona-details > div {
     flex: 1 1 120px;
@@ -245,7 +236,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
   }
   .persona-goals {
     color: #40849e;
@@ -268,7 +258,6 @@
     text-align: left;
   }
   .persona-details li {
-   
     text-align: left;
   }
   .persona-summary {
@@ -280,10 +269,7 @@
     margin-top: 0.8rem;
     background: #fafdff;
     text-align: center;
-    
   }
-
-  /* ===== AJUSTES DE IMAGEM DE CAPA DO PROJETO ===== */
   .project-card {
     padding-left: 0;
     padding-right: 0;
@@ -353,7 +339,6 @@
     padding-left: 0;
     padding-right: 0;
     padding-top: 1.1rem;
-
     min-width: 97vw;
     font-size: 1.11rem;
     margin: 0 auto;
@@ -379,8 +364,6 @@
     display: block;
     margin: 0 auto;
   }
-
-  /* ===== AJUSTES DE IMAGEM DE CAPA DO PROJETO (mobile menor) ===== */
   .project-card {
     padding-left: 0;
     padding-right: 0;
@@ -456,10 +439,10 @@
   .persona-container {
     padding: 0.4rem 0.1rem 0.6rem 0.1rem;
   }
-   .persona-row {
+  .persona-row {
     font-size: 0.70rem;
     grid-template-columns: 80px repeat(5, minmax(80px, 1fr));
-    min-width: 650px; /* mantenha maior que 320px para não cortar */
+    min-width: 650px;
   }
   .persona-col, .persona-label {
     padding: 0.14rem 0.1rem;
@@ -500,7 +483,7 @@
   .container,
   .sobre-mim-container,
   .project-details-container {
-    padding: 1.6rem 0.7rem 1.6rem 0.7rem;
+    padding: 0.7rem 0.7rem 1.6rem 0.7rem;
     max-width: 99vw;
     text-align: center;
   }
@@ -525,8 +508,8 @@
   .perfil-tecnologias img {
     width: 17px !important;
     height: 17px !important;
-  }}
-
+  }
+}
 @media (max-width: 700px) {
   .wireframes-papel {
     gap: 8px;
@@ -538,43 +521,98 @@
     max-height: 180px;
   }
 }
-
 @media (max-width: 500px) {
   .wireframes-papel {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    margin: 0 0 -60px 0;}
-   .wireframes-figma {
+    margin: 0 0 -60px 0;
+  }
+  .wireframes-figma {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-}
-
- #processo .wireframe-figma-desktop {
-  width: 290px !important;
-  }  
+  }
+  #processo .wireframe-figma-desktop {
+    width: 290px !important;
+  }
   #processo .wireframe-figma-mobile {
-  width: 120px !important;
- }  
-
- #processo .prototipo-baixa-fidelidade img {
-  width: 300px !important;
- }
-
+    width: 120px !important;
   }
-  .wireframe-desktop,
-  .wireframe-mobile {
-    width: 90vw;
-    max-width: 350px;
-    height: auto;
-    max-height: 200px;
+  #processo .prototipo-baixa-fidelidade img {
+    width: 300px !important;
   }
-  #processo .persona-photo {
+}
+.wireframe-desktop,
+.wireframe-mobile {
+  width: 90vw;
+  max-width: 350px;
+  height: auto;
+  max-height: 200px;
+}
+#processo .persona-photo {
   width: 300px !important;
   height: 200px !important;
   object-fit: cover;
   border-radius: 10px !important;
+}
+
+/* --- AJUSTES RESPONSIVOS PARA .projects-list E .project-image --- */
+@media (max-width: 700px) {
+  .projects-list-container,
+  .projects-list-grid,
+  .project-group,
+  .project-card {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
   }
+  .project-image {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    /* Remova altura fixa/padding extra! */
+    height: auto !important;
+    aspect-ratio: unset !important;
+   
+    border-radius: 10px !important;
+    margin: 0 auto !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    padding: 0 !important;
+  }
+}
+@media (max-width: 500px) {
+  .projects-list-container,
+  .projects-list-grid,
+  .project-group,
+  .project-card,
+  .project-image {
+    width: 100vw !important;
+    max-width: 80vw !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    height: 120vw !important;
+    aspect-ratio: unset !important;
+  }
+}
 
-
+/* Garante que todas as imagens dentro de .hero-image-block e .project-card sejam responsivas */
+.hero-image-block img,
+.project-image img,
+.img-fluid {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-sizing: border-box;
+}

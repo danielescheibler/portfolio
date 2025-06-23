@@ -1,27 +1,27 @@
-<header class="site-hero">
-  <div class="site-hero-bg"></div>
+<header class="site-hero" role="banner">
+  <div class="site-hero-bg" aria-hidden="true"></div>
   <div class="site-hero-top">
     <img data-i18n img="logo-img" src="assets/logo.png" alt="Logo Daniele Scheibler" class="site-logo">
     <button class="menu-toggle" aria-label="Abrir menu" id="menu-toggle">
       <img src="assets/burger-bar.png" alt="Menu">
     </button>
-    <nav class="header-nav" id="header-nav">
+    <nav class="header-nav" id="header-nav" aria-label="Menu principal">
       <a href="#projects-list" class="nav-link" data-i18n="menu-home">Página Inicial</a>
       <a href="#sobre-mim" class="nav-link" data-i18n="menu-about">Sobre Mim</a>
       <a href="#contato" class="nav-link" data-i18n="menu-contact">Contato</a>
     </nav>
-    <div class="menu-overlay" id="menu-overlay"></div>
-    <div class="header-lang">
-      <button class="lang-btn active" data-lang="pt" data-i18n="lang-pt">PT</button>
-      <span class="lang-sep">|</span>
-      <button class="lang-btn" data-lang="en" data-i18n="lang-en">EN</button>
+    <div class="menu-overlay" id="menu-overlay" aria-hidden="true"></div>
+    <div class="header-lang" aria-label="Seleção de idioma">
+      <button class="lang-btn active" data-lang="pt" data-i18n="lang-pt" aria-pressed="true">PT</button>
+      <span class="lang-sep" aria-hidden="true">|</span>
+      <button class="lang-btn" data-lang="en" data-i18n="lang-en" aria-pressed="false">EN</button>
     </div>
   </div>
   <div class="site-hero-bottom">
-    <div class="header-social">
-      <a href="https://github.com/danielescheibler" target="_blank" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://instagram.com/danieles.designer" target="_blank" class="icon-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/danielescheibler/" target="_blank" class="icon-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <div class="header-social" aria-label="Redes sociais">
+      <a href="https://github.com/danielescheibler" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://instagram.com/danieles.designer" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/danielescheibler/" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
     </div>
   </div>
   <button id="theme-toggle" class="theme-float" aria-label="Alternar tema" title="Tema claro/escuro">

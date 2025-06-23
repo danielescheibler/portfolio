@@ -442,21 +442,4 @@
   </small>
 </section>
 
-  <!-- Troca do gráfico conforme tema -->
-  <script>
-    // Troca o gráfico do processo conforme tema
-    function atualizarGraficoProcesso() {
-      var tema = document.documentElement.getAttribute('data-theme');
-      var img = document.getElementById('grafico-processo');
-      if (!img) return;
-      img.src = (tema === "dark")
-        ? "assets/processodoprojeto_dark.png"
-        : "assets/processodoprojeto.png";
-    }
-    atualizarGraficoProcesso();
-    // Observa mudanças no atributo data-theme
-    const observer = new MutationObserver(atualizarGraficoProcesso);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-  </script>
-</body>
-</html>
+  
